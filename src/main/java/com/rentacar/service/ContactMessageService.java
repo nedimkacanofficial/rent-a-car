@@ -9,6 +9,8 @@ import com.rentacar.mapper.ContactMessageMapper;
 import com.rentacar.repository.ContactMessageRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -29,7 +31,8 @@ public class ContactMessageService {
 
     @Transactional(readOnly = true)
     public ContactMessageResponseDTO getById(Long id) throws ResourceNotFoundException {
-        return ContactMessageMapper.toDTO(this.contactMessageRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(String.format(ErrorMessage.RESOURCE_NOT_FOUND_MESSAGE, id))));
+        ContactMessage contactMessage = this.contactMessageRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(String.format(ErrorMessage.RESOURCE_NOT_FOUND_MESSAGE, id)));
+        return ContactMessageMapper.toDTO(contactMessage);
     }
 
     public void create(ContactMessageRequestDTO contactMessageRequestDTO) {
@@ -42,11 +45,18 @@ public class ContactMessageService {
         messageToUpdate.setEmail(contactMessageRequestDTO.getEmail());
         messageToUpdate.setSubject(contactMessageRequestDTO.getSubject());
         messageToUpdate.setBody(contactMessageRequestDTO.getBody());
+
         this.contactMessageRepository.save(messageToUpdate);
     }
 
     public void deleteById(Long id) throws ResourceNotFoundException {
         ContactMessage contactMessage = this.contactMessageRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(String.format(ErrorMessage.RESOURCE_NOT_FOUND_MESSAGE, id)));
         this.contactMessageRepository.deleteById(contactMessage.getId());
+    }
+
+    public Page<ContactMessageResponseDTO> getAllWithPage(Pageable pageable) {
+        Page<ContactMessage> page = contactMessageRepository.findAll(pageable);
+
+        return page.map(ContactMessageMapper::toDTO);
     }
 }
