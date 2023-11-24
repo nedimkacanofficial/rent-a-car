@@ -1,0 +1,40 @@
+# Server configuration
+server:
+  port: 8080
+  error:
+    include-binding-errors: always
+    include-message: always
+    include-stacktrace: never
+
+# Logging configuration
+logging:
+  file:
+    name: logs/rentacar.log
+  pattern:
+    file: "%d %-5level [%thread] %logger:msg%n"
+  level:
+    org.springframework.web: INFO
+    org.hibernate: INFO
+    com.rentacar: DEBUG
+
+# Database Configuration
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/rentacarDB
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+# Swagger-ui custom path
+springdoc:
+  swagger-ui:
+    path: /rentacar-ui.html
