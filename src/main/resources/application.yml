@@ -37,9 +37,8 @@ spring:
 # Security Configuration
 rentacar:
   app:
-    jwt:
-      # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
-      secret-key: 1I3G3IUWEPs3qoy+4Ps8SVKeL6yB6ukc8+/T6oo9FpB9jgmgzBaGj3AnvLrEFD/btnY5XZ7Egcg8RCYkQUItfNfQ4v091qIbfQ93nk5JC8g46YoDDrqKJH4L50MNFwbvHQHuLCyc0Uz665KlCD3n6r6YnJHTUAGcQcSeiZh15ZM=
+    jwt: # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
+      secret-key: FHbkfqLuqNS/9fa4ZFR7ec8FB9lnyvxPji3otkkp5D2A6e7EAw9J0cdKeovwjbkKts8dQvQKeV6xuJA/Ub8VpA==
       expiration-ms: 86400000
 
 # Swagger-ui custom path
