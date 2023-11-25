@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -160,6 +162,32 @@ public class RentACarExceptionHandler extends ResponseEntityExceptionHandler {
     @Override
     protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex, @Nonnull HttpHeaders headers, @Nonnull HttpStatusCode status, WebRequest request) {
         ApiResponseError error = new ApiResponseError(HttpStatus.BAD_REQUEST, ex.getMessage(), request.getDescription(false));
+        return buildResponseEntity(error);
+    }
+
+    /**
+     * Handles AccessDeniedException and generates a ResponseEntity with an ApiResponseError.
+     *
+     * @param ex      The AccessDeniedException that was thrown.
+     * @param request The WebRequest associated with the exception.
+     * @return A ResponseEntity containing an ApiResponseError with details about the exception.
+     */
+    @ExceptionHandler(AccessDeniedException.class)
+    protected ResponseEntity<Object> handleAccessDeniedException(AccessDeniedException ex, WebRequest request) {
+        ApiResponseError error = new ApiResponseError(HttpStatus.FORBIDDEN, ex.getMessage(), request.getDescription(false));
+        return buildResponseEntity(error);
+    }
+
+    /**
+     * Handles BadCredentialsException and generates a ResponseEntity with an ApiResponseError.
+     *
+     * @param ex      The BadCredentialsException that was thrown.
+     * @param request The WebRequest associated with the exception.
+     * @return A ResponseEntity containing an ApiResponseError with details about the exception.
+     */
+    @ExceptionHandler(BadCredentialsException.class)
+    protected ResponseEntity<Object> handleAccessDeniedException(BadCredentialsException ex, WebRequest request) {
+        ApiResponseError error = new ApiResponseError(HttpStatus.UNAUTHORIZED, ex.getMessage(), request.getDescription(false));
         return buildResponseEntity(error);
     }
 
