@@ -16,7 +16,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -47,7 +46,6 @@ public class ContactMessageController {
         Map<String, String> responseMap = new HashMap<>();
         responseMap.put("message", "Contact Message has been created successfully.");
         responseMap.put("status", "true");
-        responseMap.put("date", LocalDateTime.now().toString());
 
         return new ResponseEntity<>(responseMap, HttpStatus.CREATED);
     }
@@ -59,7 +57,6 @@ public class ContactMessageController {
         Map<String, String> responseMap = new HashMap<>();
         responseMap.put("message", "Contact Message has been updated successfully.");
         responseMap.put("status", "true");
-        responseMap.put("date", LocalDateTime.now().toString());
 
         return new ResponseEntity<>(responseMap, HttpStatus.OK);
     }
@@ -71,7 +68,6 @@ public class ContactMessageController {
         Map<String, String> responseMap = new HashMap<>();
         responseMap.put("message", "Contact Message has been deleted successfully.");
         responseMap.put("status", "true");
-        responseMap.put("date", LocalDateTime.now().toString());
 
         return new ResponseEntity<>(responseMap, HttpStatus.OK);
     }
