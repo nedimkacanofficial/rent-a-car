@@ -37,10 +37,10 @@ public class User implements Serializable {
     @Column(length = 120, nullable = false)
     private String password;
 
-    @Column(length = 15, nullable = false)
+    @Column(length = 14, nullable = false)
     private String phoneNumber;
 
-    @Column(length = 100, nullable = false)
+    @Column(nullable = false)
     private String address;
 
     @Column(length = 15, nullable = false)

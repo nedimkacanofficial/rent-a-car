@@ -14,6 +14,18 @@ import org.springframework.stereotype.Service;
 public class UserDetailsServiceImpl implements UserDetailsService {
     private final UserRepository userRepository;
 
+    /**
+     * Loads a user by their username (email) from the database.
+     * <p>
+     * This method is part of the Spring Security UserDetailsServiceImpl interface.
+     * It retrieves a user from the database based on the provided email.
+     * If the user is found, a UserDetailsImpl is created and returned.
+     * If the user is not found, a UsernameNotFoundException is thrown.
+     *
+     * @param email The email (username) of the user to load.
+     * @return UserDetailsImpl A UserDetailsImpl object representing the loaded user.
+     * @throws UsernameNotFoundException If the user with the specified email is not found in the database.
+     */
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         User user = this.userRepository.findByEmail(email).orElseThrow(() -> new UsernameNotFoundException(String.format(ErrorMessage.USER_NOT_FOUND_MESSAGE, email)));
