@@ -11,8 +11,12 @@ import lombok.Setter;
 @AllArgsConstructor
 public class ContactMessageResponseDTO {
     private Long id;
+
     private String name;
+
     private String email;
+
     private String subject;
+
     private String body;
 }
