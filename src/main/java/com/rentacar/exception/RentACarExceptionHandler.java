@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -175,6 +176,26 @@ public class RentACarExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(AccessDeniedException.class)
     protected ResponseEntity<Object> handleAccessDeniedException(AccessDeniedException ex, WebRequest request) {
         ApiResponseError error = new ApiResponseError(HttpStatus.FORBIDDEN, ex.getMessage(), request.getDescription(false));
+        return buildResponseEntity(error);
+    }
+
+    /**
+     * Handles exceptions related to authentication errors.
+     * <p>
+     * This method is designed to handle exceptions of type AuthenticationException,
+     * which may occur during authentication processes. It returns a ResponseEntity
+     * containing an ApiResponseError object with details about the error, including
+     * the HTTP status code, error message, and a description of the request.
+     * </p>
+     *
+     * @param ex      The AuthenticationException that was thrown.
+     * @param request The WebRequest containing information about the current request.
+     * @return ResponseEntity<Object> A ResponseEntity containing an ApiResponseError
+     * object with details about the authentication error.
+     */
+    @ExceptionHandler(AuthenticationException.class)
+    protected ResponseEntity<Object> handleAuthenticationException(AuthenticationException ex, WebRequest request) {
+        ApiResponseError error = new ApiResponseError(HttpStatus.BAD_REQUEST, ex.getMessage(), request.getDescription(false));
         return buildResponseEntity(error);
     }
 
