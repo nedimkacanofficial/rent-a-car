@@ -32,6 +32,8 @@ public class ContactMessageService {
      * representing all contact messages in the database.
      */
     public List<ContactMessageResponseDTO> getAll() {
+        log.info("Fetching all contact messages from the database.");
+
         List<ContactMessage> contactMessageList = this.contactMessageRepository.findAll();
 
         return ContactMessageMapper.toDTOList(contactMessageList);
@@ -49,6 +51,8 @@ public class ContactMessageService {
      * @throws ResourceNotFoundException If the contact message with the specified ID is not found in the database.
      */
     public ContactMessageResponseDTO getById(Long id) throws ResourceNotFoundException {
+        log.info("Fetching contact message with ID: {}", id);
+
         ContactMessage contactMessage = this.contactMessageRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(String.format(ErrorMessage.RESOURCE_NOT_FOUND_MESSAGE, id)));
 
         return ContactMessageMapper.toDTO(contactMessage);
@@ -63,6 +67,8 @@ public class ContactMessageService {
      * @param contactMessageRequestDTO The ContactMessageRequestDTO containing information for creating a new contact message.
      */
     public void create(ContactMessageRequestDTO contactMessageRequestDTO) {
+        log.info("Creating a new contact message.");
+
         this.contactMessageRepository.save(ContactMessageMapper.toEntity(contactMessageRequestDTO));
     }
 
@@ -79,6 +85,8 @@ public class ContactMessageService {
      * @throws ResourceNotFoundException If the contact message with the specified ID is not found in the database.
      */
     public void update(Long id, ContactMessageRequestDTO contactMessageRequestDTO) {
+        log.info("Updating contact message with ID: {}", id);
+
         ContactMessage messageToUpdate = this.contactMessageRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(String.format(ErrorMessage.RESOURCE_NOT_FOUND_MESSAGE, id)));
 
         messageToUpdate.setName(contactMessageRequestDTO.getName());
@@ -100,6 +108,8 @@ public class ContactMessageService {
      * @throws ResourceNotFoundException If the contact message with the specified ID is not found in the database.
      */
     public void deleteById(Long id) throws ResourceNotFoundException {
+        log.info("Deleting contact message with ID: {}", id);
+
         ContactMessage contactMessage = this.contactMessageRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(String.format(ErrorMessage.RESOURCE_NOT_FOUND_MESSAGE, id)));
 
         this.contactMessageRepository.deleteById(contactMessage.getId());
@@ -115,6 +125,8 @@ public class ContactMessageService {
      * @return Page<ContactMessageResponseDTO> A paginated list of ContactMessageResponseDTO objects.
      */
     public Page<ContactMessageResponseDTO> getAllWithPage(Pageable pageable) {
+        log.info("Fetching a paginated list of contact messages from the database.");
+
         Page<ContactMessage> page = contactMessageRepository.findAll(pageable);
 
         return page.map(ContactMessageMapper::toDTO);

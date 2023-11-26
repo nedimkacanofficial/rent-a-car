@@ -36,6 +36,7 @@ public class JwtUtilsService {
      */
     public String generateJwtToken(Authentication authentication) {
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
+        logger.info("Generating JWT token for user with ID: {}", userDetails.getId());
 
         return Jwts.builder().setSubject(String.valueOf(userDetails.getId())).setIssuedAt(new Date()).setExpiration(new Date(new Date().getTime() + jwtExpirationMs)).signWith(getSignKey(), SignatureAlgorithm.HS512).compact();
     }
@@ -56,9 +57,16 @@ public class JwtUtilsService {
      * @throws IllegalArgumentException If the provided token is null or empty.
      */
     public Long getIdFromJwtToken(String token) {
-        Claims claims = Jwts.parserBuilder().setSigningKey(getSignKey()).build().parseClaimsJws(token).getBody();
-        String strId = claims.getSubject();
-        return Long.parseLong(strId);
+        try {
+            Claims claims = Jwts.parserBuilder().setSigningKey(getSignKey()).build().parseClaimsJws(token).getBody();
+            String strId = claims.getSubject();
+            Long userId = Long.parseLong(strId);
+            logger.info("Extracted user ID {} from JWT token", userId);
+            return userId;
+        } catch (Exception e) {
+            logger.error("Error extracting user ID from JWT token: {}", e.getMessage());
+            return null;
+        }
     }
 
     /**
@@ -79,17 +87,18 @@ public class JwtUtilsService {
     public boolean validateJwtToken(String token) {
         try {
             Jwts.parserBuilder().setSigningKey(getSignKey()).build().parseClaimsJws(token);
+            logger.info("JWT token validation successful");
             return true;
         } catch (ExpiredJwtException e) {
-            logger.error("JWT Token is expired {}", e.getMessage());
+            logger.error("JWT Token is expired: {}", e.getMessage());
         } catch (UnsupportedJwtException e) {
-            logger.error("JWT Token is unsupported {}", e.getMessage());
+            logger.error("JWT Token is unsupported: {}", e.getMessage());
         } catch (MalformedJwtException e) {
-            logger.error("JWT Token is malformed {}", e.getMessage());
+            logger.error("JWT Token is malformed: {}", e.getMessage());
         } catch (SignatureException e) {
-            logger.error("Invalid JWT signature {}", e.getMessage());
+            logger.error("Invalid JWT signature: {}", e.getMessage());
         } catch (IllegalArgumentException e) {
-            logger.error("JWT Token illegal args {}", e.getMessage());
+            logger.error("JWT Token illegal args: {}", e.getMessage());
         }
         return false;
     }
@@ -104,7 +113,12 @@ public class JwtUtilsService {
      * @throws IllegalArgumentException If the JWT secret key is not properly encoded or is empty.
      */
     private Key getSignKey() {
-        byte[] keyBytes = Decoders.BASE64.decode(jwtSecretKey);
-        return Keys.hmacShaKeyFor(keyBytes);
+        try {
+            byte[] keyBytes = Decoders.BASE64.decode(jwtSecretKey);
+            return Keys.hmacShaKeyFor(keyBytes);
+        } catch (Exception e) {
+            logger.error("Error retrieving signing key: {}", e.getMessage());
+            return null;
+        }
     }
 }

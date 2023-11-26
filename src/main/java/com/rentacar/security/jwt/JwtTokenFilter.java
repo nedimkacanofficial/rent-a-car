@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -20,6 +21,7 @@ import java.io.IOException;
 
 @Component
 @RequiredArgsConstructor
+@Slf4j
 public class JwtTokenFilter extends OncePerRequestFilter {
     private final JwtUtilsService jwtUtilsService;
 
@@ -31,17 +33,18 @@ public class JwtTokenFilter extends OncePerRequestFilter {
     protected void doFilterInternal(@NonNull HttpServletRequest request, @NonNull HttpServletResponse response, @NonNull FilterChain filterChain) throws ServletException, IOException {
         try {
             String jwt = parseJwt(request);
-            if (jwt != null && jwtUtilsService.validateJwtToken(jwt)) {
-                Long id = jwtUtilsService.getIdFromJwtToken(jwt);
+            if (jwt != null && this.jwtUtilsService.validateJwtToken(jwt)) {
+                Long id = this.jwtUtilsService.getIdFromJwtToken(jwt);
                 this.userRepository.findById(id).ifPresent(user -> {
                     request.setAttribute("id", user.getId());
-                    UserDetails userDetails = userDetailsService.loadUserByUsername(user.getEmail());
+                    UserDetails userDetails = this.userDetailsService.loadUserByUsername(user.getEmail());
                     UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                     SecurityContextHolder.getContext().setAuthentication(authentication);
+                    log.info("User successfully authenticated. User ID: {}", id);
                 });
             }
         } catch (Exception e) {
-            logger.error("User Authentication error");
+            log.error("User Authentication error: {}", e.getMessage());
         }
         filterChain.doFilter(request, response);
     }
@@ -58,6 +61,10 @@ public class JwtTokenFilter extends OncePerRequestFilter {
     @Override
     protected boolean shouldNotFilter(@NonNull HttpServletRequest request) throws ServletException {
         AntPathMatcher antPathMatcher = new AntPathMatcher();
-        return antPathMatcher.match("/register", request.getServletPath()) || antPathMatcher.match("/login", request.getServletPath());
+        boolean shouldNotFilter = antPathMatcher.match("/register", request.getServletPath()) || antPathMatcher.match("/login", request.getServletPath());
+        if (shouldNotFilter) {
+            log.info("Request path matched exclusion path. Skipping JWT filter.");
+        }
+        return shouldNotFilter;
     }
 }

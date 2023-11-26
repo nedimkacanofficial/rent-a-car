@@ -4,6 +4,7 @@ import com.rentacar.domain.User;
 import com.rentacar.exception.message.ErrorMessage;
 import com.rentacar.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class UserDetailsServiceImpl implements UserDetailsService {
     private final UserRepository userRepository;
 
@@ -28,7 +30,17 @@ public class UserDetailsServiceImpl implements UserDetailsService {
      */
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        User user = this.userRepository.findByEmail(email).orElseThrow(() -> new UsernameNotFoundException(String.format(ErrorMessage.USER_NOT_FOUND_MESSAGE, email)));
-        return UserDetailsImpl.build(user);
+        log.info("Attempting to load user by email: {}", email);
+
+        User user = this.userRepository.findByEmail(email).orElseThrow(() -> {
+            log.error("User with email {} not found in the database.", email);
+            return new UsernameNotFoundException(String.format(ErrorMessage.USER_NOT_FOUND_MESSAGE, email));
+        });
+
+        UserDetails userDetails = UserDetailsImpl.build(user);
+
+        log.info("User with email {} successfully loaded.", email);
+
+        return userDetails;
     }
 }

@@ -6,7 +6,7 @@ import com.rentacar.dto.response.LoginResponseDTO;
 import com.rentacar.dto.response.default_response.DefaultResponseDTO;
 import com.rentacar.dto.response.default_response.ResponseMessage;
 import com.rentacar.security.jwt.JwtUtilsService;
-import com.rentacar.service.UserService;
+import com.rentacar.service.AuthJWTService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -24,8 +24,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping
 @RequiredArgsConstructor
 @Slf4j
-public class UserJWTController {
-    private final UserService userService;
+public class AuthJWTController {
+    private final AuthJWTService userService;
 
     private final AuthenticationProvider authenticationProvider;
 
@@ -46,6 +46,8 @@ public class UserJWTController {
      */
     @PostMapping("/register")
     public ResponseEntity<DefaultResponseDTO> register(@Valid @RequestBody RegisterRequestDTO registerRequestDTO) {
+        log.info("Register method called for user with email: {}", registerRequestDTO.getEmail());
+
         this.userService.register(registerRequestDTO);
 
         DefaultResponseDTO defaultResponseDTO = new DefaultResponseDTO(true, ResponseMessage.CREATED_SUCCESS_RESPONSE_MESSAGE);
@@ -67,6 +69,8 @@ public class UserJWTController {
      */
     @PostMapping("/login")
     public ResponseEntity<LoginResponseDTO> login(@Valid @RequestBody LoginRequestDTO loginRequestDTO) {
+        log.info("Login method called for user with email: {}", loginRequestDTO.getEmail());
+
         Authentication authentication = this.authenticationProvider.authenticate(new UsernamePasswordAuthenticationToken(loginRequestDTO.getEmail(), loginRequestDTO.getPassword()));
 
         String token = this.jwtUtilsService.generateJwtToken(authentication);

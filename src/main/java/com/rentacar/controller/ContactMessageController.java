@@ -39,6 +39,8 @@ public class ContactMessageController {
      */
     @GetMapping
     public ResponseEntity<List<ContactMessageResponseDTO>> getAll() {
+        log.info("Fetching all contact messages.");
+
         List<ContactMessageResponseDTO> contactMessageResponseDTO = this.contactMessageService.getAll();
 
         return new ResponseEntity<>(contactMessageResponseDTO, HttpStatus.OK);
@@ -58,6 +60,8 @@ public class ContactMessageController {
      */
     @GetMapping(path = "/{id}")
     public ResponseEntity<ContactMessageResponseDTO> getById(@PathVariable long id) {
+        log.info("Fetching contact message with ID: {}", id);
+
         ContactMessageResponseDTO contactMessageResponseDTO = this.contactMessageService.getById(id);
 
         return new ResponseEntity<>(contactMessageResponseDTO, HttpStatus.OK);
@@ -78,6 +82,8 @@ public class ContactMessageController {
      */
     @PostMapping(path = "/visitors")
     public ResponseEntity<DefaultResponseDTO> create(@Valid @RequestBody ContactMessageRequestDTO contactMessageRequestDTO) {
+        log.info("Creating a new contact message for visitor with email: {}", contactMessageRequestDTO.getEmail());
+
         this.contactMessageService.create(contactMessageRequestDTO);
 
         DefaultResponseDTO defaultResponseDTO = new DefaultResponseDTO(true, ResponseMessage.CREATED_SUCCESS_RESPONSE_MESSAGE);
@@ -103,6 +109,8 @@ public class ContactMessageController {
      */
     @PutMapping(path = "/{id}")
     public ResponseEntity<DefaultResponseDTO> update(@PathVariable long id, @Valid @RequestBody ContactMessageRequestDTO contactMessageRequestDTO) {
+        log.info("Updating contact message with ID: {}", id);
+
         this.contactMessageService.update(id, contactMessageRequestDTO);
 
         DefaultResponseDTO defaultResponseDTO = new DefaultResponseDTO(true, ResponseMessage.UPDATED_SUCCESS_RESPONSE_MESSAGE);
@@ -123,6 +131,8 @@ public class ContactMessageController {
      */
     @DeleteMapping(path = "/{id}")
     public ResponseEntity<DefaultResponseDTO> deleteById(@PathVariable long id) {
+        log.info("Deleting contact message with ID: {}", id);
+
         this.contactMessageService.deleteById(id);
 
         DefaultResponseDTO defaultResponseDTO = new DefaultResponseDTO(true, ResponseMessage.DELETED_SUCCESS_RESPONSE_MESSAGE);
@@ -156,6 +166,8 @@ public class ContactMessageController {
         }
 
         Pageable pageable = PageRequest.of(adjustedPageNumber, size, Sort.by(checkDirection, sortField));
+
+        log.info("Fetching paginated list of contact messages (Page {}, Size {}, SortField {}, Direction {}).", page, size, sortField, direction);
 
         Page<ContactMessageResponseDTO> contactMessageResponseDTOPage = this.contactMessageService.getAllWithPage(pageable);
 

@@ -21,7 +21,7 @@ import java.util.Set;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class UserService {
+public class AuthJWTService {
     private final UserRepository userRepository;
 
     private final RoleRepository roleRepository;
@@ -41,7 +41,10 @@ public class UserService {
      * @throws ResourceNotFoundException If the default role ROLE_CUSTOMER is not found in the database.
      */
     public void register(RegisterRequestDTO registerRequestDTO) {
+        log.info("Attempting to register a new user with email: {}", registerRequestDTO.getEmail());
+
         if (this.userRepository.existsByEmail(registerRequestDTO.getEmail())) {
+            log.error("Registration failed. User with email {} already exists.", registerRequestDTO.getEmail());
             throw new ConflictException(String.format(ErrorMessage.EMAIL_ALREADY_EXIST_MESSAGE, registerRequestDTO.getEmail()));
         }
 
@@ -54,5 +57,7 @@ public class UserService {
         User user = UserMapper.toEntity(registerRequestDTO, encodedPassword, roleSet);
 
         this.userRepository.save(user);
+
+        log.info("User with email {} successfully registered.", registerRequestDTO.getEmail());
     }
 }
