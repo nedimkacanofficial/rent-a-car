@@ -6,6 +6,7 @@ import com.rentacar.dto.response.default_response.DefaultResponseDTO;
 import com.rentacar.dto.response.default_response.ResponseMessage;
 import com.rentacar.service.ContactMessageService;
 import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -24,6 +25,7 @@ import java.util.List;
 @RequestMapping("/contact-messages")
 @RequiredArgsConstructor
 @Slf4j
+@Tag(name = "Contact Message Controller")
 public class ContactMessageController {
     private final ContactMessageService contactMessageService;
 

@@ -7,6 +7,7 @@ import com.rentacar.dto.response.default_response.DefaultResponseDTO;
 import com.rentacar.dto.response.default_response.ResponseMessage;
 import com.rentacar.security.jwt.JwtUtilsService;
 import com.rentacar.service.UserJWTService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -24,6 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping
 @RequiredArgsConstructor
 @Slf4j
+@Tag(name = "User JWT Controller")
 public class UserJWTController {
     private final UserJWTService userService;
 

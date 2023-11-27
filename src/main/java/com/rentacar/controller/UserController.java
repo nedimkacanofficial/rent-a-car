@@ -1,13 +1,17 @@
 package com.rentacar.controller;
 
 import com.rentacar.dto.response.UserResponseDTO;
+import com.rentacar.security.service.UserDetailsImpl;
 import com.rentacar.service.UserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +22,7 @@ import java.util.List;
 @RequestMapping("/users")
 @RequiredArgsConstructor
 @Slf4j
+@Tag(name = "User Controller")
 public class UserController {
     private final UserService userService;
 
@@ -58,7 +63,12 @@ public class UserController {
     @GetMapping
     @PreAuthorize("hasRole('ADMIN') or hasRole('CUSTOMER')")
     public ResponseEntity<UserResponseDTO> getById(HttpServletRequest httpServletRequest) {
-        Long id = (Long) httpServletRequest.getAttribute("id");
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        Long id = ((UserDetailsImpl) authentication.getPrincipal()).getId();
+
+        // Burada istersek aşağıdaki gibi gelen requesten id değerini alabiliriz.
+        // Ama biz diğer yolu yani authentication içinden aldık.
+        // Long id = (Long) httpServletRequest.getAttribute("id");
 
         log.info("Fetching user with ID: {}", id);
 

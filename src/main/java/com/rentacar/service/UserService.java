@@ -48,7 +48,7 @@ public class UserService {
      * @throws ResourceNotFoundException If the user with the specified ID is not found in the database.
      */
     public UserResponseDTO getById(Long id) {
-        log.info("Fetching user with ID: {}", id);
+        log.info("Fetching user with ID: {} the database", id);
 
         User user = this.userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(String.format(ErrorMessage.RESOURCE_NOT_FOUND_MESSAGE, id)));
 
