@@ -11,7 +11,6 @@ import java.time.LocalDateTime;
  */
 
 /**
- * Description of UpdatePasswordRequestDTO.
  *
  * @author github.com/nedimkacanofficial
  * @version 1.0

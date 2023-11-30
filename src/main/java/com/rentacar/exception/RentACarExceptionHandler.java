@@ -22,7 +22,6 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import java.util.List;
 
 /**
- * Description of UpdatePasswordRequestDTO.
  *
  * @author github.com/nedimkacanofficial
  * @version 1.0

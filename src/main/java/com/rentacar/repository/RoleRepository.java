@@ -7,7 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 
 /**
- * Description of UpdatePasswordRequestDTO.
  *
  * @author github.com/nedimkacanofficial
  * @version 1.0

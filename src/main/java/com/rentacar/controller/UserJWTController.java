@@ -22,7 +22,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Description of UpdatePasswordRequestDTO.
  *
  * @author github.com/nedimkacanofficial
  * @version 1.0

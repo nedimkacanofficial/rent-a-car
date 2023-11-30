@@ -1,7 +1,6 @@
 package com.rentacar.dto.response.default_response;
 
 /**
- * Description of UpdatePasswordRequestDTO.
  *
  * @author github.com/nedimkacanofficial
  * @version 1.0

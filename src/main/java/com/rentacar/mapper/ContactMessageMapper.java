@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Description of UpdatePasswordRequestDTO.
  *
  * @author github.com/nedimkacanofficial
  * @version 1.0

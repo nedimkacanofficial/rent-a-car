@@ -20,7 +20,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Description of UpdatePasswordRequestDTO.
  *
  * @author github.com/nedimkacanofficial
  * @version 1.0

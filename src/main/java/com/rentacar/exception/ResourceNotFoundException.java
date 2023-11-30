@@ -3,7 +3,6 @@ package com.rentacar.exception;
 import java.io.Serial;
 
 /**
- * Description of UpdatePasswordRequestDTO.
  *
  * @author github.com/nedimkacanofficial
  * @version 1.0

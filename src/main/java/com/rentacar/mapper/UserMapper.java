@@ -10,7 +10,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * Description of UpdatePasswordRequestDTO.
  *
  * @author github.com/nedimkacanofficial
  * @version 1.0

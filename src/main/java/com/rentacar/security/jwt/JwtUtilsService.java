@@ -15,7 +15,6 @@ import java.security.Key;
 import java.util.Date;
 
 /**
- * Description of UpdatePasswordRequestDTO.
  *
  * @author github.com/nedimkacanofficial
  * @version 1.0

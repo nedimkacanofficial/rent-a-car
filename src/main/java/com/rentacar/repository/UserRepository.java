@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 /**
- * Description of UpdatePasswordRequestDTO.
  *
  * @author github.com/nedimkacanofficial
  * @version 1.0

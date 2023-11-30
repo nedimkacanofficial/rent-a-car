@@ -10,7 +10,6 @@ import java.io.Serial;
 import java.io.Serializable;
 
 /**
- * Description of UpdatePasswordRequestDTO.
  *
  * @author github.com/nedimkacanofficial
  * @version 1.0

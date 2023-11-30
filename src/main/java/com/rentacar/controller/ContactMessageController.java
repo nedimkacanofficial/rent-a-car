@@ -22,7 +22,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * Description of UpdatePasswordRequestDTO.
  *
  * @author github.com/nedimkacanofficial
  * @version 1.0
