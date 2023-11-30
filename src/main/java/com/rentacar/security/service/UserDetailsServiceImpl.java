@@ -10,6 +10,14 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+/**
+ * Description of UpdatePasswordRequestDTO.
+ *
+ * @author github.com/nedimkacanofficial
+ * @version 1.0
+ * @package com.rentacar.security.service
+ * @since 28/11/2023
+ */
 @Service
 @RequiredArgsConstructor
 @Slf4j

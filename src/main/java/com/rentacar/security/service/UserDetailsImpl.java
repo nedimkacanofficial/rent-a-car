@@ -14,6 +14,14 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Description of UpdatePasswordRequestDTO.
+ *
+ * @author github.com/nedimkacanofficial
+ * @version 1.0
+ * @package com.rentacar.security.service
+ * @since 28/11/2023
+ */
 @Getter
 @Setter
 @AllArgsConstructor

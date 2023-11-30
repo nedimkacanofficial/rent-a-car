@@ -10,6 +10,14 @@ import lombok.Setter;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Description of UpdatePasswordRequestDTO.
+ *
+ * @author github.com/nedimkacanofficial
+ * @version 1.0
+ * @package com.rentacar.dto.response
+ * @since 28/11/2023
+ */
 @Getter
 @Setter
 @NoArgsConstructor

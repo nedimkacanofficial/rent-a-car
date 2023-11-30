@@ -7,6 +7,14 @@ import com.rentacar.dto.response.ContactMessageResponseDTO;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Description of UpdatePasswordRequestDTO.
+ *
+ * @author github.com/nedimkacanofficial
+ * @version 1.0
+ * @package com.rentacar.mapper
+ * @since 28/11/2023
+ */
 public class ContactMessageMapper {
     public static ContactMessageResponseDTO toDTO(ContactMessage contactMessage) {
         ContactMessageResponseDTO responseDTO = new ContactMessageResponseDTO();

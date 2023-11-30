@@ -4152,3 +4152,696 @@ Caused by: java.lang.ClassNotFoundException: com.rentacar.security.jwt.JwtTokenF
 2023-11-26 16:27:41,075 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-11-26 16:27:41,076 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-3 - Shutdown initiated...
 2023-11-26 16:27:41,078 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-3 - Shutdown completed.
+2023-11-28 17:50:55,742 INFO  [restartedMain] com.rentacar.RentACarApplication:Starting RentACarApplication using Java 17.0.9 with PID 14992 (C:\Users\msi\Desktop\clone\rent-a-car\target\classes started by msi in C:\Users\msi\Desktop\clone\rent-a-car)
+2023-11-28 17:50:55,744 DEBUG [restartedMain] com.rentacar.RentACarApplication:Running with Spring Boot v3.2.0, Spring v6.1.1
+2023-11-28 17:50:55,744 INFO  [restartedMain] com.rentacar.RentACarApplication:No active profile set, falling back to 1 default profile: "default"
+2023-11-28 17:50:55,776 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-28 17:50:55,776 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-28 17:50:56,680 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28 17:50:56,727 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 39 ms. Found 3 JPA repository interfaces.
+2023-11-28 17:50:57,382 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port 8080 (http)
+2023-11-28 17:50:57,391 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2023-11-28 17:50:57,391 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-28 17:50:57,429 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2023-11-28 17:50:57,429 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 1653 ms
+2023-11-28 17:50:57,677 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28 17:50:57,733 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-11-28 17:50:57,768 INFO  [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator:HHH000026: Second-level cache disabled
+2023-11-28 17:50:57,969 INFO  [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo:No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28 17:50:57,993 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+2023-11-28 17:50:58,122 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool:HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@16373b5d
+2023-11-28 17:50:58,124 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+2023-11-28 17:50:58,172 WARN  [restartedMain] org.hibernate.orm.deprecation:HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-28 17:50:58,864 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28 17:50:58,970 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 17:50:59,272 DEBUG [restartedMain] com.rentacar.security.jwt.JwtTokenFilter:Filter 'jwtTokenFilter' configured for use
+2023-11-28 17:50:59,536 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28 17:50:59,979 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-28 17:51:00,034 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@28eb5c24, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6dc9970c, org.springframework.security.web.context.SecurityContextHolderFilter@341ba391, org.springframework.security.web.header.HeaderWriterFilter@123321a6, org.springframework.web.filter.CorsFilter@33a10015, org.springframework.security.web.authentication.logout.LogoutFilter@579f4386, com.rentacar.security.jwt.JwtTokenFilter@535168d0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51830a8f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63f5ec31, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c143e19, org.springframework.security.web.session.SessionManagementFilter@26b9a57e, org.springframework.security.web.access.ExceptionTranslationFilter@56220a70, org.springframework.security.web.access.intercept.AuthorizationFilter@192d4469]
+2023-11-28 17:51:00,496 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-11-28 17:51:00,552 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port 8080 (http) with context path ''
+2023-11-28 17:51:00,565 INFO  [restartedMain] com.rentacar.RentACarApplication:Started RentACarApplication in 5.178 seconds (process running for 6.273)
+2023-11-28 17:51:00,828 INFO  [RMI TCP Connection(4)-192.168.1.138] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-28 17:51:00,829 INFO  [RMI TCP Connection(4)-192.168.1.138] org.springframework.web.servlet.DispatcherServlet:Initializing Servlet 'dispatcherServlet'
+2023-11-28 17:51:00,830 INFO  [RMI TCP Connection(4)-192.168.1.138] org.springframework.web.servlet.DispatcherServlet:Completed initialization in 1 ms
+2023-11-28 17:51:04,004 WARN  [http-nio-8080-exec-2] org.springframework.web.servlet.handler.HandlerMappingIntrospector:Cache miss for REQUEST dispatch to '/users/auth/page' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2023-11-28 17:51:04,015 WARN  [http-nio-8080-exec-2] org.springframework.web.servlet.handler.HandlerMappingIntrospector:Cache miss for REQUEST dispatch to '/users/auth/page' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2023-11-28 17:51:04,957 INFO  [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Restarting due to 36 class path changes (0 additions, 35 deletions, 1 modification)
+2023-11-28 17:51:04,973 INFO  [Thread-5] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 17:51:04,976 INFO  [Thread-5] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+2023-11-28 17:51:04,978 INFO  [Thread-5] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+2023-11-28 17:51:05,059 INFO  [restartedMain] com.rentacar.RentACarApplication:Starting RentACarApplication using Java 17.0.9 with PID 14992 (C:\Users\msi\Desktop\clone\rent-a-car\target\classes started by msi in C:\Users\msi\Desktop\clone\rent-a-car)
+2023-11-28 17:51:05,059 DEBUG [restartedMain] com.rentacar.RentACarApplication:Running with Spring Boot v3.2.0, Spring v6.1.1
+2023-11-28 17:51:05,059 INFO  [restartedMain] com.rentacar.RentACarApplication:No active profile set, falling back to 1 default profile: "default"
+2023-11-28 17:51:05,311 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28 17:51:05,311 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2023-11-28 17:51:05,459 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port 8080 (http)
+2023-11-28 17:51:05,459 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2023-11-28 17:51:05,459 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-28 17:51:05,473 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2023-11-28 17:51:05,473 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 413 ms
+2023-11-28 17:51:05,611 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28 17:51:05,613 INFO  [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator:HHH000026: Second-level cache disabled
+2023-11-28 17:51:05,616 INFO  [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo:No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28 17:51:05,617 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-2 - Starting...
+2023-11-28 17:51:05,626 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool:HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@62b2399e
+2023-11-28 17:51:05,626 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-2 - Start completed.
+2023-11-28 17:51:05,629 WARN  [restartedMain] org.hibernate.orm.deprecation:HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-28 17:51:05,637 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28 17:51:05,637 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 17:51:05,720 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28 17:51:06,214 WARN  [restartedMain] org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:
+
+Using generated security password: 589a932a-aa90-4ba9-9e9d-1701c454c1db
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-11-28 17:51:06,256 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-28 17:51:06,277 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2ddc670c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18ac6b37, org.springframework.security.web.context.SecurityContextHolderFilter@8357141, org.springframework.security.web.header.HeaderWriterFilter@6530feb2, org.springframework.web.filter.CorsFilter@5a31ca13, org.springframework.security.web.csrf.CsrfFilter@51ccfec2, org.springframework.security.web.authentication.logout.LogoutFilter@6460140, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7e7497a3, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@238c841, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5bf5f1fd, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@62caac73, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@edcb8a6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29771d09, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15df1988, org.springframework.security.web.access.ExceptionTranslationFilter@41176dfe, org.springframework.security.web.access.intercept.AuthorizationFilter@299bdd7e]
+2023-11-28 17:51:06,362 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-11-28 17:51:06,378 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port 8080 (http) with context path ''
+2023-11-28 17:51:06,386 INFO  [restartedMain] com.rentacar.RentACarApplication:Started RentACarApplication in 1.354 seconds (process running for 12.095)
+2023-11-28 17:51:06,390 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   ManagementWebSecurityAutoConfiguration matched:
+      - found 'session' scope (OnWebApplicationCondition)
+      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   UserDetailsServiceAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager'; @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (OnClassCondition)
+      - @ConditionalOnBean (types: org.springframework.security.config.annotation.ObjectPostProcessor; SearchStrategy: all) found bean 'objectPostProcessor'; @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2023-11-28 17:51:07,793 INFO  [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Restarting due to 35 class path changes (35 additions, 0 deletions, 0 modifications)
+2023-11-28 17:51:07,811 INFO  [Thread-7] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 17:51:07,811 INFO  [Thread-7] com.zaxxer.hikari.HikariDataSource:HikariPool-2 - Shutdown initiated...
+2023-11-28 17:51:07,814 INFO  [Thread-7] com.zaxxer.hikari.HikariDataSource:HikariPool-2 - Shutdown completed.
+2023-11-28 17:51:07,892 INFO  [restartedMain] com.rentacar.RentACarApplication:Starting RentACarApplication using Java 17.0.9 with PID 14992 (C:\Users\msi\Desktop\clone\rent-a-car\target\classes started by msi in C:\Users\msi\Desktop\clone\rent-a-car)
+2023-11-28 17:51:07,892 DEBUG [restartedMain] com.rentacar.RentACarApplication:Running with Spring Boot v3.2.0, Spring v6.1.1
+2023-11-28 17:51:07,892 INFO  [restartedMain] com.rentacar.RentACarApplication:No active profile set, falling back to 1 default profile: "default"
+2023-11-28 17:51:08,218 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28 17:51:08,249 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
+2023-11-28 17:51:08,469 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port 8080 (http)
+2023-11-28 17:51:08,471 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2023-11-28 17:51:08,472 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-28 17:51:08,488 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2023-11-28 17:51:08,489 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 596 ms
+2023-11-28 17:51:08,669 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28 17:51:08,671 INFO  [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator:HHH000026: Second-level cache disabled
+2023-11-28 17:51:08,673 INFO  [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo:No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28 17:51:08,674 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-3 - Starting...
+2023-11-28 17:51:08,686 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool:HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@7a8573e9
+2023-11-28 17:51:08,686 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-3 - Start completed.
+2023-11-28 17:51:08,689 WARN  [restartedMain] org.hibernate.orm.deprecation:HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-28 17:51:08,735 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28 17:51:08,768 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 17:51:08,887 DEBUG [restartedMain] com.rentacar.security.jwt.JwtTokenFilter:Filter 'jwtTokenFilter' configured for use
+2023-11-28 17:51:09,027 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28 17:51:09,327 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-28 17:51:09,369 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4d13b212, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2722689a, org.springframework.security.web.context.SecurityContextHolderFilter@2abe1236, org.springframework.security.web.header.HeaderWriterFilter@50d7b7b9, org.springframework.web.filter.CorsFilter@2e1f09a0, org.springframework.security.web.authentication.logout.LogoutFilter@d614a10, com.rentacar.security.jwt.JwtTokenFilter@6e8fadd4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5eed79d7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1251b934, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24b744ae, org.springframework.security.web.session.SessionManagementFilter@59fbb400, org.springframework.security.web.access.ExceptionTranslationFilter@64c8703e, org.springframework.security.web.access.intercept.AuthorizationFilter@373d6552]
+2023-11-28 17:51:09,698 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-11-28 17:51:09,717 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port 8080 (http) with context path ''
+2023-11-28 17:51:09,724 INFO  [restartedMain] com.rentacar.RentACarApplication:Started RentACarApplication in 1.857 seconds (process running for 15.433)
+2023-11-28 17:51:09,726 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   ManagementWebSecurityAutoConfiguration:
+      Did not match:
+         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' securityFilterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+      Matched:
+         - found 'session' scope (OnWebApplicationCondition)
+
+   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
+
+   UserDetailsServiceAutoConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.security.authentication.AuthenticationManager,org.springframework.security.authentication.AuthenticationProvider,org.springframework.security.core.userdetails.UserDetailsService,org.springframework.security.authentication.AuthenticationManagerResolver,org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) found beans of type 'org.springframework.security.core.userdetails.UserDetailsService' userDetailsServiceImpl and found beans of type 'org.springframework.security.authentication.AuthenticationProvider' authenticationProvider (OnBeanCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.springframework.security.authentication.AuthenticationManager'; @ConditionalOnMissingClass did not find unwanted classes 'org.springframework.security.oauth2.client.registration.ClientRegistrationRepository', 'org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector', 'org.springframework.security.saml2.provider.service.registration.RelyingPartyRegistrationRepository' (OnClassCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2023-11-28 17:51:14,196 INFO  [http-nio-8080-exec-3] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-28 17:51:14,196 INFO  [http-nio-8080-exec-3] org.springframework.web.servlet.DispatcherServlet:Initializing Servlet 'dispatcherServlet'
+2023-11-28 17:51:14,197 INFO  [http-nio-8080-exec-3] org.springframework.web.servlet.DispatcherServlet:Completed initialization in 1 ms
+2023-11-28 17:51:14,198 WARN  [http-nio-8080-exec-3] org.springframework.web.servlet.handler.HandlerMappingIntrospector:Cache miss for REQUEST dispatch to '/login' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2023-11-28 17:51:14,198 INFO  [http-nio-8080-exec-3] com.rentacar.security.jwt.JwtTokenFilter:Request path matched exclusion path. Skipping JWT filter.
+2023-11-28 17:51:14,199 WARN  [http-nio-8080-exec-3] org.springframework.web.servlet.handler.HandlerMappingIntrospector:Cache miss for REQUEST dispatch to '/login' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2023-11-28 17:51:14,200 INFO  [http-nio-8080-exec-3] com.rentacar.security.jwt.JwtTokenFilter:Request path matched exclusion path. Skipping JWT filter.
+2023-11-28 17:51:14,305 INFO  [http-nio-8080-exec-3] com.rentacar.controller.UserJWTController:Login method called for user with email: ndmkcn@gmail.com
+2023-11-28 17:51:14,380 INFO  [http-nio-8080-exec-3] com.rentacar.security.service.UserDetailsServiceImpl:Attempting to load user by email: ndmkcn@gmail.com
+2023-11-28 17:51:14,523 INFO  [http-nio-8080-exec-3] com.rentacar.security.service.UserDetailsServiceImpl:User with email ndmkcn@gmail.com successfully loaded.
+2023-11-28 17:51:14,591 INFO  [http-nio-8080-exec-3] com.rentacar.security.jwt.JwtUtilsService:Generating JWT token for user with ID: 1
+2023-11-28 17:51:49,824 INFO  [http-nio-8080-exec-2] com.rentacar.security.jwt.JwtUtilsService:JWT token validation successful
+2023-11-28 17:51:49,825 INFO  [http-nio-8080-exec-2] com.rentacar.security.jwt.JwtUtilsService:Extracted user ID 1 from JWT token
+2023-11-28 17:51:49,848 INFO  [http-nio-8080-exec-2] com.rentacar.security.service.UserDetailsServiceImpl:Attempting to load user by email: ndmkcn@gmail.com
+2023-11-28 17:51:49,875 INFO  [http-nio-8080-exec-2] com.rentacar.security.service.UserDetailsServiceImpl:User with email ndmkcn@gmail.com successfully loaded.
+2023-11-28 17:51:49,876 INFO  [http-nio-8080-exec-2] com.rentacar.security.jwt.JwtTokenFilter:User successfully authenticated. User ID: 1
+2023-11-28 17:51:49,888 WARN  [http-nio-8080-exec-2] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource users/auth/page.]
+2023-11-28 17:53:23,330 INFO  [http-nio-8080-exec-6] com.rentacar.security.jwt.JwtUtilsService:JWT token validation successful
+2023-11-28 17:53:23,331 INFO  [http-nio-8080-exec-6] com.rentacar.security.jwt.JwtUtilsService:Extracted user ID 1 from JWT token
+2023-11-28 17:53:23,339 INFO  [http-nio-8080-exec-6] com.rentacar.security.service.UserDetailsServiceImpl:Attempting to load user by email: ndmkcn@gmail.com
+2023-11-28 17:53:23,344 INFO  [http-nio-8080-exec-6] com.rentacar.security.service.UserDetailsServiceImpl:User with email ndmkcn@gmail.com successfully loaded.
+2023-11-28 17:53:23,344 INFO  [http-nio-8080-exec-6] com.rentacar.security.jwt.JwtTokenFilter:User successfully authenticated. User ID: 1
+2023-11-28 17:53:23,349 WARN  [http-nio-8080-exec-6] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource users/auth/page.]
+2023-11-28 17:53:29,108 INFO  [http-nio-8080-exec-7] com.rentacar.security.jwt.JwtUtilsService:JWT token validation successful
+2023-11-28 17:53:29,109 INFO  [http-nio-8080-exec-7] com.rentacar.security.jwt.JwtUtilsService:Extracted user ID 1 from JWT token
+2023-11-28 17:53:29,115 INFO  [http-nio-8080-exec-7] com.rentacar.security.service.UserDetailsServiceImpl:Attempting to load user by email: ndmkcn@gmail.com
+2023-11-28 17:53:29,120 INFO  [http-nio-8080-exec-7] com.rentacar.security.service.UserDetailsServiceImpl:User with email ndmkcn@gmail.com successfully loaded.
+2023-11-28 17:53:29,120 INFO  [http-nio-8080-exec-7] com.rentacar.security.jwt.JwtTokenFilter:User successfully authenticated. User ID: 1
+2023-11-28 17:53:29,125 WARN  [http-nio-8080-exec-7] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource users/auth/page.]
+2023-11-28 17:54:20,715 INFO  [http-nio-8080-exec-8] com.rentacar.security.jwt.JwtUtilsService:JWT token validation successful
+2023-11-28 17:54:20,717 INFO  [http-nio-8080-exec-8] com.rentacar.security.jwt.JwtUtilsService:Extracted user ID 1 from JWT token
+2023-11-28 17:54:20,722 INFO  [http-nio-8080-exec-8] com.rentacar.security.service.UserDetailsServiceImpl:Attempting to load user by email: ndmkcn@gmail.com
+2023-11-28 17:54:20,727 INFO  [http-nio-8080-exec-8] com.rentacar.security.service.UserDetailsServiceImpl:User with email ndmkcn@gmail.com successfully loaded.
+2023-11-28 17:54:20,727 INFO  [http-nio-8080-exec-8] com.rentacar.security.jwt.JwtTokenFilter:User successfully authenticated. User ID: 1
+2023-11-28 17:54:20,731 WARN  [http-nio-8080-exec-8] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource users/auth/page.]
+2023-11-28 17:54:56,385 INFO  [http-nio-8080-exec-9] com.rentacar.security.jwt.JwtUtilsService:JWT token validation successful
+2023-11-28 17:54:56,386 INFO  [http-nio-8080-exec-9] com.rentacar.security.jwt.JwtUtilsService:Extracted user ID 1 from JWT token
+2023-11-28 17:54:56,392 INFO  [http-nio-8080-exec-9] com.rentacar.security.service.UserDetailsServiceImpl:Attempting to load user by email: ndmkcn@gmail.com
+2023-11-28 17:54:56,395 INFO  [http-nio-8080-exec-9] com.rentacar.security.service.UserDetailsServiceImpl:User with email ndmkcn@gmail.com successfully loaded.
+2023-11-28 17:54:56,395 INFO  [http-nio-8080-exec-9] com.rentacar.security.jwt.JwtTokenFilter:User successfully authenticated. User ID: 1
+2023-11-28 17:54:56,400 WARN  [http-nio-8080-exec-9] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'sort' for method parameter type String is not present]
+2023-11-28 17:55:23,956 INFO  [http-nio-8080-exec-1] com.rentacar.security.jwt.JwtUtilsService:JWT token validation successful
+2023-11-28 17:55:23,957 INFO  [http-nio-8080-exec-1] com.rentacar.security.jwt.JwtUtilsService:Extracted user ID 1 from JWT token
+2023-11-28 17:55:23,962 INFO  [http-nio-8080-exec-1] com.rentacar.security.service.UserDetailsServiceImpl:Attempting to load user by email: ndmkcn@gmail.com
+2023-11-28 17:55:23,967 INFO  [http-nio-8080-exec-1] com.rentacar.security.service.UserDetailsServiceImpl:User with email ndmkcn@gmail.com successfully loaded.
+2023-11-28 17:55:23,967 INFO  [http-nio-8080-exec-1] com.rentacar.security.jwt.JwtTokenFilter:User successfully authenticated. User ID: 1
+2023-11-28 17:55:23,988 WARN  [http-nio-8080-exec-1] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [org.springframework.security.access.AccessDeniedException: Access Denied]
+2023-11-28 17:55:33,381 INFO  [http-nio-8080-exec-3] com.rentacar.security.jwt.JwtUtilsService:JWT token validation successful
+2023-11-28 17:55:33,382 INFO  [http-nio-8080-exec-3] com.rentacar.security.jwt.JwtUtilsService:Extracted user ID 1 from JWT token
+2023-11-28 17:55:33,389 INFO  [http-nio-8080-exec-3] com.rentacar.security.service.UserDetailsServiceImpl:Attempting to load user by email: ndmkcn@gmail.com
+2023-11-28 17:55:33,395 INFO  [http-nio-8080-exec-3] com.rentacar.security.service.UserDetailsServiceImpl:User with email ndmkcn@gmail.com successfully loaded.
+2023-11-28 17:55:33,396 INFO  [http-nio-8080-exec-3] com.rentacar.security.jwt.JwtTokenFilter:User successfully authenticated. User ID: 1
+2023-11-28 17:55:33,398 WARN  [http-nio-8080-exec-3] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [org.springframework.security.access.AccessDeniedException: Access Denied]
+2023-11-28 17:56:38,468 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 17:56:38,469 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-3 - Shutdown initiated...
+2023-11-28 17:56:38,471 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-3 - Shutdown completed.
+2023-11-28 17:56:41,206 INFO  [restartedMain] com.rentacar.RentACarApplication:Starting RentACarApplication using Java 17.0.9 with PID 17840 (C:\Users\msi\Desktop\clone\rent-a-car\target\classes started by msi in C:\Users\msi\Desktop\clone\rent-a-car)
+2023-11-28 17:56:41,207 DEBUG [restartedMain] com.rentacar.RentACarApplication:Running with Spring Boot v3.2.0, Spring v6.1.1
+2023-11-28 17:56:41,207 INFO  [restartedMain] com.rentacar.RentACarApplication:No active profile set, falling back to 1 default profile: "default"
+2023-11-28 17:56:41,238 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-28 17:56:41,238 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-28 17:56:41,953 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28 17:56:41,992 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
+2023-11-28 17:56:42,516 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port 8080 (http)
+2023-11-28 17:56:42,522 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2023-11-28 17:56:42,523 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-28 17:56:42,555 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2023-11-28 17:56:42,555 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 1317 ms
+2023-11-28 17:56:42,766 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28 17:56:42,800 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-11-28 17:56:42,820 INFO  [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator:HHH000026: Second-level cache disabled
+2023-11-28 17:56:42,961 INFO  [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo:No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28 17:56:42,978 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+2023-11-28 17:56:43,047 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool:HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@16995372
+2023-11-28 17:56:43,048 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+2023-11-28 17:56:43,067 WARN  [restartedMain] org.hibernate.orm.deprecation:HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-28 17:56:43,650 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28 17:56:43,709 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 17:56:43,984 DEBUG [restartedMain] com.rentacar.security.jwt.JwtTokenFilter:Filter 'jwtTokenFilter' configured for use
+2023-11-28 17:56:44,212 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28 17:56:44,644 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-28 17:56:44,698 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@26f2041c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ac638e8, org.springframework.security.web.context.SecurityContextHolderFilter@303fd9d9, org.springframework.security.web.header.HeaderWriterFilter@284dcad8, org.springframework.web.filter.CorsFilter@6cab864f, org.springframework.security.web.authentication.logout.LogoutFilter@90c093d, com.rentacar.security.jwt.JwtTokenFilter@442db539, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55e17504, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5af9b1c3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25cdef66, org.springframework.security.web.session.SessionManagementFilter@1f3b785c, org.springframework.security.web.access.ExceptionTranslationFilter@7719379c, org.springframework.security.web.access.intercept.AuthorizationFilter@5b231634]
+2023-11-28 17:56:45,150 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-11-28 17:56:45,203 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port 8080 (http) with context path ''
+2023-11-28 17:56:45,215 INFO  [restartedMain] com.rentacar.RentACarApplication:Started RentACarApplication in 4.312 seconds (process running for 4.839)
+2023-11-28 17:56:45,783 INFO  [RMI TCP Connection(2)-192.168.1.138] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-28 17:56:45,783 INFO  [RMI TCP Connection(2)-192.168.1.138] org.springframework.web.servlet.DispatcherServlet:Initializing Servlet 'dispatcherServlet'
+2023-11-28 17:56:45,784 INFO  [RMI TCP Connection(2)-192.168.1.138] org.springframework.web.servlet.DispatcherServlet:Completed initialization in 1 ms
+2023-11-28 17:56:59,488 WARN  [http-nio-8080-exec-1] org.springframework.web.servlet.handler.HandlerMappingIntrospector:Cache miss for REQUEST dispatch to '/users/auth/pages' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2023-11-28 17:56:59,516 INFO  [http-nio-8080-exec-1] com.rentacar.security.jwt.JwtUtilsService:JWT token validation successful
+2023-11-28 17:56:59,517 INFO  [http-nio-8080-exec-1] com.rentacar.security.jwt.JwtUtilsService:Extracted user ID 1 from JWT token
+2023-11-28 17:56:59,574 INFO  [http-nio-8080-exec-1] com.rentacar.security.service.UserDetailsServiceImpl:Attempting to load user by email: ndmkcn@gmail.com
+2023-11-28 17:56:59,658 INFO  [http-nio-8080-exec-1] com.rentacar.security.service.UserDetailsServiceImpl:User with email ndmkcn@gmail.com successfully loaded.
+2023-11-28 17:56:59,658 INFO  [http-nio-8080-exec-1] com.rentacar.security.jwt.JwtTokenFilter:User successfully authenticated. User ID: 1
+2023-11-28 17:56:59,661 WARN  [http-nio-8080-exec-1] org.springframework.web.servlet.handler.HandlerMappingIntrospector:Cache miss for REQUEST dispatch to '/users/auth/pages' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2023-11-28 17:56:59,688 INFO  [http-nio-8080-exec-1] com.rentacar.controller.UserController:Fetching paginated list of user (Page 1, Size 3, SortField email, Direction DESC).
+2023-11-28 17:56:59,688 INFO  [http-nio-8080-exec-1] com.rentacar.service.UserService:Fetching a paginated list of user from the database.
+2023-11-28 17:58:03,287 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 17:58:03,290 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+2023-11-28 17:58:03,293 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+2023-11-28 17:58:04,819 INFO  [restartedMain] com.rentacar.RentACarApplication:Starting RentACarApplication using Java 17.0.9 with PID 19736 (C:\Users\msi\Desktop\clone\rent-a-car\target\classes started by msi in C:\Users\msi\Desktop\clone\rent-a-car)
+2023-11-28 17:58:04,820 DEBUG [restartedMain] com.rentacar.RentACarApplication:Running with Spring Boot v3.2.0, Spring v6.1.1
+2023-11-28 17:58:04,821 INFO  [restartedMain] com.rentacar.RentACarApplication:No active profile set, falling back to 1 default profile: "default"
+2023-11-28 17:58:04,846 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-28 17:58:04,847 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-28 17:58:05,518 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28 17:58:05,557 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2023-11-28 17:58:06,068 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port 8080 (http)
+2023-11-28 17:58:06,077 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2023-11-28 17:58:06,077 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-28 17:58:06,110 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2023-11-28 17:58:06,110 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 1263 ms
+2023-11-28 17:58:06,325 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28 17:58:06,359 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-11-28 17:58:06,381 INFO  [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator:HHH000026: Second-level cache disabled
+2023-11-28 17:58:06,520 INFO  [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo:No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28 17:58:06,537 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+2023-11-28 17:58:06,604 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool:HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@57da461a
+2023-11-28 17:58:06,605 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+2023-11-28 17:58:06,625 WARN  [restartedMain] org.hibernate.orm.deprecation:HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-28 17:58:07,204 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28 17:58:07,268 WARN  [restartedMain] org.hibernate.engine.jdbc.spi.SqlExceptionHelper:SQL Warning Code: 0, SQLState: 00000
+2023-11-28 17:58:07,268 WARN  [restartedMain] org.hibernate.engine.jdbc.spi.SqlExceptionHelper:constraint "uk_npn1wf1yu1g5rjohbek375pp1" of relation "tbl_user" does not exist, skipping
+2023-11-28 17:58:07,279 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 17:58:07,558 DEBUG [restartedMain] com.rentacar.security.jwt.JwtTokenFilter:Filter 'jwtTokenFilter' configured for use
+2023-11-28 17:58:07,803 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28 17:58:08,229 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-28 17:58:08,283 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1c5d42a2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50a4cdbc, org.springframework.security.web.context.SecurityContextHolderFilter@dddebff, org.springframework.security.web.header.HeaderWriterFilter@39275c8c, org.springframework.web.filter.CorsFilter@30c7232a, org.springframework.security.web.authentication.logout.LogoutFilter@208b927e, com.rentacar.security.jwt.JwtTokenFilter@53a945ae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4022eee9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4943e46d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31e330c1, org.springframework.security.web.session.SessionManagementFilter@79829fb3, org.springframework.security.web.access.ExceptionTranslationFilter@1260521d, org.springframework.security.web.access.intercept.AuthorizationFilter@2e344789]
+2023-11-28 17:58:08,718 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-11-28 17:58:08,771 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port 8080 (http) with context path ''
+2023-11-28 17:58:08,782 INFO  [restartedMain] com.rentacar.RentACarApplication:Started RentACarApplication in 4.254 seconds (process running for 4.76)
+2023-11-28 17:58:09,231 INFO  [RMI TCP Connection(3)-192.168.1.138] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-28 17:58:09,232 INFO  [RMI TCP Connection(3)-192.168.1.138] org.springframework.web.servlet.DispatcherServlet:Initializing Servlet 'dispatcherServlet'
+2023-11-28 17:58:09,233 INFO  [RMI TCP Connection(3)-192.168.1.138] org.springframework.web.servlet.DispatcherServlet:Completed initialization in 1 ms
+2023-11-28 17:59:09,049 WARN  [http-nio-8080-exec-2] org.springframework.web.servlet.handler.HandlerMappingIntrospector:Cache miss for REQUEST dispatch to '/register' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2023-11-28 17:59:09,054 INFO  [http-nio-8080-exec-2] com.rentacar.security.jwt.JwtTokenFilter:Request path matched exclusion path. Skipping JWT filter.
+2023-11-28 17:59:09,056 WARN  [http-nio-8080-exec-2] org.springframework.web.servlet.handler.HandlerMappingIntrospector:Cache miss for REQUEST dispatch to '/register' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2023-11-28 17:59:09,061 INFO  [http-nio-8080-exec-2] com.rentacar.security.jwt.JwtTokenFilter:Request path matched exclusion path. Skipping JWT filter.
+2023-11-28 17:59:09,151 INFO  [http-nio-8080-exec-2] com.rentacar.controller.UserJWTController:Register method called for user with email: ndmkcn@gmail.com
+2023-11-28 17:59:09,159 INFO  [http-nio-8080-exec-2] com.rentacar.service.UserJWTService:Attempting to register a new user with email: ndmkcn@gmail.com
+2023-11-28 17:59:09,362 INFO  [http-nio-8080-exec-2] com.rentacar.service.UserJWTService:User with email ndmkcn@gmail.com successfully registered.
+2023-11-28 17:59:13,902 INFO  [http-nio-8080-exec-3] com.rentacar.security.jwt.JwtTokenFilter:Request path matched exclusion path. Skipping JWT filter.
+2023-11-28 17:59:13,903 INFO  [http-nio-8080-exec-3] com.rentacar.security.jwt.JwtTokenFilter:Request path matched exclusion path. Skipping JWT filter.
+2023-11-28 17:59:13,906 INFO  [http-nio-8080-exec-3] com.rentacar.controller.UserJWTController:Login method called for user with email: ndmkcn@gmail.com
+2023-11-28 17:59:13,974 INFO  [http-nio-8080-exec-3] com.rentacar.security.service.UserDetailsServiceImpl:Attempting to load user by email: ndmkcn@gmail.com
+2023-11-28 17:59:13,989 INFO  [http-nio-8080-exec-3] com.rentacar.security.service.UserDetailsServiceImpl:User with email ndmkcn@gmail.com successfully loaded.
+2023-11-28 17:59:14,058 INFO  [http-nio-8080-exec-3] com.rentacar.security.jwt.JwtUtilsService:Generating JWT token for user with ID: 1
+2023-11-28 17:59:15,941 INFO  [http-nio-8080-exec-4] com.rentacar.security.jwt.JwtTokenFilter:Request path matched exclusion path. Skipping JWT filter.
+2023-11-28 17:59:15,942 INFO  [http-nio-8080-exec-4] com.rentacar.security.jwt.JwtTokenFilter:Request path matched exclusion path. Skipping JWT filter.
+2023-11-28 17:59:15,944 INFO  [http-nio-8080-exec-4] com.rentacar.controller.UserJWTController:Login method called for user with email: ndmkcn@gmail.com
+2023-11-28 17:59:15,944 INFO  [http-nio-8080-exec-4] com.rentacar.security.service.UserDetailsServiceImpl:Attempting to load user by email: ndmkcn@gmail.com
+2023-11-28 17:59:15,950 INFO  [http-nio-8080-exec-4] com.rentacar.security.service.UserDetailsServiceImpl:User with email ndmkcn@gmail.com successfully loaded.
+2023-11-28 17:59:16,017 INFO  [http-nio-8080-exec-4] com.rentacar.security.jwt.JwtUtilsService:Generating JWT token for user with ID: 1
+2023-11-28 17:59:17,634 INFO  [http-nio-8080-exec-5] com.rentacar.security.jwt.JwtTokenFilter:Request path matched exclusion path. Skipping JWT filter.
+2023-11-28 17:59:17,635 INFO  [http-nio-8080-exec-5] com.rentacar.security.jwt.JwtTokenFilter:Request path matched exclusion path. Skipping JWT filter.
+2023-11-28 17:59:17,637 INFO  [http-nio-8080-exec-5] com.rentacar.controller.UserJWTController:Login method called for user with email: ndmkcn@gmail.com
+2023-11-28 17:59:17,637 INFO  [http-nio-8080-exec-5] com.rentacar.security.service.UserDetailsServiceImpl:Attempting to load user by email: ndmkcn@gmail.com
+2023-11-28 17:59:17,644 INFO  [http-nio-8080-exec-5] com.rentacar.security.service.UserDetailsServiceImpl:User with email ndmkcn@gmail.com successfully loaded.
+2023-11-28 17:59:17,714 INFO  [http-nio-8080-exec-5] com.rentacar.security.jwt.JwtUtilsService:Generating JWT token for user with ID: 1
+2023-11-28 17:59:31,538 INFO  [http-nio-8080-exec-6] com.rentacar.security.jwt.JwtUtilsService:JWT token validation successful
+2023-11-28 17:59:31,540 INFO  [http-nio-8080-exec-6] com.rentacar.security.jwt.JwtUtilsService:Extracted user ID 1 from JWT token
+2023-11-28 17:59:31,556 INFO  [http-nio-8080-exec-6] com.rentacar.security.service.UserDetailsServiceImpl:Attempting to load user by email: ndmkcn@gmail.com
+2023-11-28 17:59:31,589 INFO  [http-nio-8080-exec-6] com.rentacar.security.service.UserDetailsServiceImpl:User with email ndmkcn@gmail.com successfully loaded.
+2023-11-28 17:59:31,590 INFO  [http-nio-8080-exec-6] com.rentacar.security.jwt.JwtTokenFilter:User successfully authenticated. User ID: 1
+2023-11-28 17:59:31,613 WARN  [http-nio-8080-exec-6] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [org.springframework.security.access.AccessDeniedException: Access Denied]
+2023-11-28 17:59:35,084 INFO  [http-nio-8080-exec-7] com.rentacar.security.jwt.JwtUtilsService:JWT token validation successful
+2023-11-28 17:59:35,085 INFO  [http-nio-8080-exec-7] com.rentacar.security.jwt.JwtUtilsService:Extracted user ID 1 from JWT token
+2023-11-28 17:59:35,091 INFO  [http-nio-8080-exec-7] com.rentacar.security.service.UserDetailsServiceImpl:Attempting to load user by email: ndmkcn@gmail.com
+2023-11-28 17:59:35,096 INFO  [http-nio-8080-exec-7] com.rentacar.security.service.UserDetailsServiceImpl:User with email ndmkcn@gmail.com successfully loaded.
+2023-11-28 17:59:35,096 INFO  [http-nio-8080-exec-7] com.rentacar.security.jwt.JwtTokenFilter:User successfully authenticated. User ID: 1
+2023-11-28 17:59:35,099 WARN  [http-nio-8080-exec-7] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [org.springframework.security.access.AccessDeniedException: Access Denied]
+2023-11-28 18:00:03,891 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:00:03,894 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+2023-11-28 18:00:03,896 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+2023-11-28 18:00:05,603 INFO  [restartedMain] com.rentacar.RentACarApplication:Starting RentACarApplication using Java 17.0.9 with PID 22336 (C:\Users\msi\Desktop\clone\rent-a-car\target\classes started by msi in C:\Users\msi\Desktop\clone\rent-a-car)
+2023-11-28 18:00:05,605 DEBUG [restartedMain] com.rentacar.RentACarApplication:Running with Spring Boot v3.2.0, Spring v6.1.1
+2023-11-28 18:00:05,605 INFO  [restartedMain] com.rentacar.RentACarApplication:No active profile set, falling back to 1 default profile: "default"
+2023-11-28 18:00:05,631 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-28 18:00:05,632 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-28 18:00:06,324 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28 18:00:06,363 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
+2023-11-28 18:00:06,893 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port 8080 (http)
+2023-11-28 18:00:06,899 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2023-11-28 18:00:06,900 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-28 18:00:06,933 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2023-11-28 18:00:06,933 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 1301 ms
+2023-11-28 18:00:07,146 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28 18:00:07,180 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-11-28 18:00:07,202 INFO  [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator:HHH000026: Second-level cache disabled
+2023-11-28 18:00:07,339 INFO  [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo:No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28 18:00:07,354 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+2023-11-28 18:00:07,422 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool:HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@463813cd
+2023-11-28 18:00:07,423 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+2023-11-28 18:00:07,446 WARN  [restartedMain] org.hibernate.orm.deprecation:HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-28 18:00:08,021 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28 18:00:08,076 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:00:08,346 DEBUG [restartedMain] com.rentacar.security.jwt.JwtTokenFilter:Filter 'jwtTokenFilter' configured for use
+2023-11-28 18:00:08,582 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28 18:00:09,000 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-28 18:00:09,055 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4c910c66, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@26ebd29c, org.springframework.security.web.context.SecurityContextHolderFilter@2a20a6f3, org.springframework.security.web.header.HeaderWriterFilter@40b9d527, org.springframework.web.filter.CorsFilter@62581d59, org.springframework.security.web.authentication.logout.LogoutFilter@475d2c0d, com.rentacar.security.jwt.JwtTokenFilter@268a9d74, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e659231, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@28a6dab4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22e8847a, org.springframework.security.web.session.SessionManagementFilter@6c1bd831, org.springframework.security.web.access.ExceptionTranslationFilter@1257cdd4, org.springframework.security.web.access.intercept.AuthorizationFilter@4c33636d]
+2023-11-28 18:00:09,564 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-11-28 18:00:09,632 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port 8080 (http) with context path ''
+2023-11-28 18:00:09,645 INFO  [restartedMain] com.rentacar.RentACarApplication:Started RentACarApplication in 4.334 seconds (process running for 4.852)
+2023-11-28 18:00:10,020 INFO  [RMI TCP Connection(2)-192.168.1.138] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-28 18:00:10,021 INFO  [RMI TCP Connection(2)-192.168.1.138] org.springframework.web.servlet.DispatcherServlet:Initializing Servlet 'dispatcherServlet'
+2023-11-28 18:00:10,021 INFO  [RMI TCP Connection(2)-192.168.1.138] org.springframework.web.servlet.DispatcherServlet:Completed initialization in 0 ms
+2023-11-28 18:00:11,125 WARN  [http-nio-8080-exec-1] org.springframework.web.servlet.handler.HandlerMappingIntrospector:Cache miss for REQUEST dispatch to '/users/auth/pages' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2023-11-28 18:00:11,154 INFO  [http-nio-8080-exec-1] com.rentacar.security.jwt.JwtUtilsService:JWT token validation successful
+2023-11-28 18:00:11,156 INFO  [http-nio-8080-exec-1] com.rentacar.security.jwt.JwtUtilsService:Extracted user ID 1 from JWT token
+2023-11-28 18:00:11,214 INFO  [http-nio-8080-exec-1] com.rentacar.security.service.UserDetailsServiceImpl:Attempting to load user by email: ndmkcn@gmail.com
+2023-11-28 18:00:11,296 INFO  [http-nio-8080-exec-1] com.rentacar.security.service.UserDetailsServiceImpl:User with email ndmkcn@gmail.com successfully loaded.
+2023-11-28 18:00:11,297 INFO  [http-nio-8080-exec-1] com.rentacar.security.jwt.JwtTokenFilter:User successfully authenticated. User ID: 1
+2023-11-28 18:00:11,299 WARN  [http-nio-8080-exec-1] org.springframework.web.servlet.handler.HandlerMappingIntrospector:Cache miss for REQUEST dispatch to '/users/auth/pages' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2023-11-28 18:00:11,327 INFO  [http-nio-8080-exec-1] com.rentacar.controller.UserController:Fetching paginated list of user (Page 1, Size 3, SortField email, Direction DESC).
+2023-11-28 18:00:11,327 INFO  [http-nio-8080-exec-1] com.rentacar.service.UserService:Fetching a paginated list of user from the database.
+2023-11-28 18:03:52,901 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:03:52,903 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+2023-11-28 18:03:52,905 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+2023-11-28 18:08:02,615 INFO  [restartedMain] com.rentacar.RentACarApplication:Starting RentACarApplication using Java 17.0.9 with PID 10772 (C:\Users\msi\Desktop\clone\rent-a-car\target\classes started by msi in C:\Users\msi\Desktop\clone\rent-a-car)
+2023-11-28 18:08:02,617 DEBUG [restartedMain] com.rentacar.RentACarApplication:Running with Spring Boot v3.2.0, Spring v6.1.1
+2023-11-28 18:08:02,617 INFO  [restartedMain] com.rentacar.RentACarApplication:No active profile set, falling back to 1 default profile: "default"
+2023-11-28 18:08:02,649 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-28 18:08:02,649 INFO  [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-28 18:08:03,325 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28 18:08:03,363 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2023-11-28 18:08:03,885 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port 8080 (http)
+2023-11-28 18:08:03,891 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2023-11-28 18:08:03,892 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-28 18:08:03,924 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2023-11-28 18:08:03,925 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 1275 ms
+2023-11-28 18:08:04,138 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28 18:08:04,173 INFO  [restartedMain] org.hibernate.Version:HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-11-28 18:08:04,196 INFO  [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator:HHH000026: Second-level cache disabled
+2023-11-28 18:08:04,336 INFO  [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo:No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28 18:08:04,354 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Starting...
+2023-11-28 18:08:04,424 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool:HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@76635112
+2023-11-28 18:08:04,425 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Start completed.
+2023-11-28 18:08:04,444 WARN  [restartedMain] org.hibernate.orm.deprecation:HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-28 18:08:05,029 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28 18:08:05,085 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:08:05,364 DEBUG [restartedMain] com.rentacar.security.jwt.JwtTokenFilter:Filter 'jwtTokenFilter' configured for use
+2023-11-28 18:08:05,615 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28 18:08:06,032 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-28 18:08:06,087 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2ffb1541, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3aeb235a, org.springframework.security.web.context.SecurityContextHolderFilter@647eddc1, org.springframework.security.web.header.HeaderWriterFilter@764182a9, org.springframework.web.filter.CorsFilter@549c459a, org.springframework.security.web.authentication.logout.LogoutFilter@4c33636d, com.rentacar.security.jwt.JwtTokenFilter@7b39ac73, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ec43328, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@e7859ac, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13cb8990, org.springframework.security.web.session.SessionManagementFilter@579f4386, org.springframework.security.web.access.ExceptionTranslationFilter@6c1bd831, org.springframework.security.web.access.intercept.AuthorizationFilter@6cab864f]
+2023-11-28 18:08:06,601 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-11-28 18:08:06,667 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port 8080 (http) with context path ''
+2023-11-28 18:08:06,680 INFO  [restartedMain] com.rentacar.RentACarApplication:Started RentACarApplication in 4.353 seconds (process running for 4.828)
+2023-11-28 18:08:07,069 INFO  [RMI TCP Connection(1)-192.168.1.138] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-28 18:08:07,069 INFO  [RMI TCP Connection(1)-192.168.1.138] org.springframework.web.servlet.DispatcherServlet:Initializing Servlet 'dispatcherServlet'
+2023-11-28 18:08:07,070 INFO  [RMI TCP Connection(1)-192.168.1.138] org.springframework.web.servlet.DispatcherServlet:Completed initialization in 1 ms
+2023-11-28 18:08:20,140 WARN  [http-nio-8080-exec-3] org.springframework.web.servlet.handler.HandlerMappingIntrospector:Cache miss for REQUEST dispatch to '/users' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2023-11-28 18:08:20,172 ERROR [http-nio-8080-exec-3] com.rentacar.security.jwt.JwtUtilsService:JWT Token is expired: JWT expired at 2023-11-27T12:57:31Z. Current time: 2023-11-28T15:08:20Z, a difference of 94249171 milliseconds.  Allowed clock skew: 0 milliseconds.
+2023-11-28 18:08:20,175 WARN  [http-nio-8080-exec-3] org.springframework.web.servlet.handler.HandlerMappingIntrospector:Cache miss for REQUEST dispatch to '/users' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2023-11-28 18:09:03,378 INFO  [http-nio-8080-exec-4] com.rentacar.security.jwt.JwtUtilsService:JWT token validation successful
+2023-11-28 18:09:03,379 INFO  [http-nio-8080-exec-4] com.rentacar.security.jwt.JwtUtilsService:Extracted user ID 1 from JWT token
+2023-11-28 18:09:03,441 INFO  [http-nio-8080-exec-4] com.rentacar.security.service.UserDetailsServiceImpl:Attempting to load user by email: ndmkcn@gmail.com
+2023-11-28 18:09:03,538 INFO  [http-nio-8080-exec-4] com.rentacar.security.service.UserDetailsServiceImpl:User with email ndmkcn@gmail.com successfully loaded.
+2023-11-28 18:09:03,538 INFO  [http-nio-8080-exec-4] com.rentacar.security.jwt.JwtTokenFilter:User successfully authenticated. User ID: 1
+2023-11-28 18:09:03,563 INFO  [http-nio-8080-exec-4] com.rentacar.controller.UserController:Fetching contact message with ID: 1
+2023-11-28 18:09:03,564 INFO  [http-nio-8080-exec-4] com.rentacar.service.UserService:Fetching user with ID: 1 the database
+2023-11-28 18:12:12,155 INFO  [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-11-28 18:12:12,177 INFO  [Thread-5] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:12:12,181 INFO  [Thread-5] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown initiated...
+2023-11-28 18:12:12,183 INFO  [Thread-5] com.zaxxer.hikari.HikariDataSource:HikariPool-1 - Shutdown completed.
+2023-11-28 18:12:12,255 INFO  [restartedMain] com.rentacar.RentACarApplication:Starting RentACarApplication using Java 17.0.9 with PID 10772 (C:\Users\msi\Desktop\clone\rent-a-car\target\classes started by msi in C:\Users\msi\Desktop\clone\rent-a-car)
+2023-11-28 18:12:12,255 DEBUG [restartedMain] com.rentacar.RentACarApplication:Running with Spring Boot v3.2.0, Spring v6.1.1
+2023-11-28 18:12:12,255 INFO  [restartedMain] com.rentacar.RentACarApplication:No active profile set, falling back to 1 default profile: "default"
+2023-11-28 18:12:12,537 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28 18:12:12,547 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 9 ms. Found 3 JPA repository interfaces.
+2023-11-28 18:12:12,688 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port 8080 (http)
+2023-11-28 18:12:12,688 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2023-11-28 18:12:12,688 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-28 18:12:12,699 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2023-11-28 18:12:12,699 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 442 ms
+2023-11-28 18:12:12,835 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28 18:12:12,837 INFO  [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator:HHH000026: Second-level cache disabled
+2023-11-28 18:12:12,840 INFO  [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo:No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28 18:12:12,840 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-2 - Starting...
+2023-11-28 18:12:12,850 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool:HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@610ee817
+2023-11-28 18:12:12,850 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-2 - Start completed.
+2023-11-28 18:12:12,853 WARN  [restartedMain] org.hibernate.orm.deprecation:HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-28 18:12:12,891 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28 18:12:12,919 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:12:13,029 DEBUG [restartedMain] com.rentacar.security.jwt.JwtTokenFilter:Filter 'jwtTokenFilter' configured for use
+2023-11-28 18:12:13,177 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28 18:12:13,438 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-28 18:12:13,480 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@f86d7ea, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3245954b, org.springframework.security.web.context.SecurityContextHolderFilter@71f4892a, org.springframework.security.web.header.HeaderWriterFilter@64211c5d, org.springframework.web.filter.CorsFilter@76df2e27, org.springframework.security.web.authentication.logout.LogoutFilter@3fd625f6, com.rentacar.security.jwt.JwtTokenFilter@56f1978f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@11c10d19, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42b37cf8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fb5c232, org.springframework.security.web.session.SessionManagementFilter@55773b35, org.springframework.security.web.access.ExceptionTranslationFilter@2e7be34b, org.springframework.security.web.access.intercept.AuthorizationFilter@651b07c7]
+2023-11-28 18:12:13,774 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-11-28 18:12:13,792 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port 8080 (http) with context path ''
+2023-11-28 18:12:13,799 INFO  [restartedMain] com.rentacar.RentACarApplication:Started RentACarApplication in 1.566 seconds (process running for 251.948)
+2023-11-28 18:12:13,801 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation unchanged
+2023-11-28 18:12:15,192 INFO  [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-11-28 18:12:15,202 INFO  [Thread-7] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:12:15,203 INFO  [Thread-7] com.zaxxer.hikari.HikariDataSource:HikariPool-2 - Shutdown initiated...
+2023-11-28 18:12:15,205 INFO  [Thread-7] com.zaxxer.hikari.HikariDataSource:HikariPool-2 - Shutdown completed.
+2023-11-28 18:12:15,255 INFO  [restartedMain] com.rentacar.RentACarApplication:Starting RentACarApplication using Java 17.0.9 with PID 10772 (C:\Users\msi\Desktop\clone\rent-a-car\target\classes started by msi in C:\Users\msi\Desktop\clone\rent-a-car)
+2023-11-28 18:12:15,255 DEBUG [restartedMain] com.rentacar.RentACarApplication:Running with Spring Boot v3.2.0, Spring v6.1.1
+2023-11-28 18:12:15,256 INFO  [restartedMain] com.rentacar.RentACarApplication:No active profile set, falling back to 1 default profile: "default"
+2023-11-28 18:12:15,458 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28 18:12:15,470 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 12 ms. Found 3 JPA repository interfaces.
+2023-11-28 18:12:15,603 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port 8080 (http)
+2023-11-28 18:12:15,603 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2023-11-28 18:12:15,603 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-28 18:12:15,614 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2023-11-28 18:12:15,614 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 358 ms
+2023-11-28 18:12:15,721 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28 18:12:15,723 INFO  [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator:HHH000026: Second-level cache disabled
+2023-11-28 18:12:15,726 INFO  [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo:No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28 18:12:15,726 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-3 - Starting...
+2023-11-28 18:12:15,735 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool:HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@2bb0338
+2023-11-28 18:12:15,736 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-3 - Start completed.
+2023-11-28 18:12:15,737 WARN  [restartedMain] org.hibernate.orm.deprecation:HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-28 18:12:15,776 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28 18:12:15,800 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:12:15,971 DEBUG [restartedMain] com.rentacar.security.jwt.JwtTokenFilter:Filter 'jwtTokenFilter' configured for use
+2023-11-28 18:12:16,136 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28 18:12:16,380 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-28 18:12:16,432 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2914b9e0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50ffc9aa, org.springframework.security.web.context.SecurityContextHolderFilter@5cf71360, org.springframework.security.web.header.HeaderWriterFilter@58dbeb54, org.springframework.web.filter.CorsFilter@377675f8, org.springframework.security.web.authentication.logout.LogoutFilter@1b7786fc, com.rentacar.security.jwt.JwtTokenFilter@348629e5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ff8ba02, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6752a570, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d33d78c, org.springframework.security.web.session.SessionManagementFilter@7e71f2cc, org.springframework.security.web.access.ExceptionTranslationFilter@33fcbe6f, org.springframework.security.web.access.intercept.AuthorizationFilter@218cf273]
+2023-11-28 18:12:16,744 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-11-28 18:12:16,763 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port 8080 (http) with context path ''
+2023-11-28 18:12:16,770 INFO  [restartedMain] com.rentacar.RentACarApplication:Started RentACarApplication in 1.53 seconds (process running for 254.919)
+2023-11-28 18:12:16,773 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation unchanged
+2023-11-28 18:12:27,334 INFO  [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-11-28 18:12:27,346 INFO  [Thread-11] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:12:27,346 INFO  [Thread-11] com.zaxxer.hikari.HikariDataSource:HikariPool-3 - Shutdown initiated...
+2023-11-28 18:12:27,348 INFO  [Thread-11] com.zaxxer.hikari.HikariDataSource:HikariPool-3 - Shutdown completed.
+2023-11-28 18:12:27,398 INFO  [restartedMain] com.rentacar.RentACarApplication:Starting RentACarApplication using Java 17.0.9 with PID 10772 (C:\Users\msi\Desktop\clone\rent-a-car\target\classes started by msi in C:\Users\msi\Desktop\clone\rent-a-car)
+2023-11-28 18:12:27,399 DEBUG [restartedMain] com.rentacar.RentACarApplication:Running with Spring Boot v3.2.0, Spring v6.1.1
+2023-11-28 18:12:27,399 INFO  [restartedMain] com.rentacar.RentACarApplication:No active profile set, falling back to 1 default profile: "default"
+2023-11-28 18:12:27,612 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28 18:12:27,626 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 14 ms. Found 3 JPA repository interfaces.
+2023-11-28 18:12:27,786 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port 8080 (http)
+2023-11-28 18:12:27,787 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2023-11-28 18:12:27,787 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-28 18:12:27,799 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2023-11-28 18:12:27,799 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 400 ms
+2023-11-28 18:12:27,934 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28 18:12:27,936 INFO  [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator:HHH000026: Second-level cache disabled
+2023-11-28 18:12:27,939 INFO  [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo:No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28 18:12:27,939 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-4 - Starting...
+2023-11-28 18:12:27,947 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool:HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@20422697
+2023-11-28 18:12:27,947 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-4 - Start completed.
+2023-11-28 18:12:27,951 WARN  [restartedMain] org.hibernate.orm.deprecation:HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-28 18:12:27,987 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28 18:12:28,014 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:12:28,135 DEBUG [restartedMain] com.rentacar.security.jwt.JwtTokenFilter:Filter 'jwtTokenFilter' configured for use
+2023-11-28 18:12:28,311 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28 18:12:28,573 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-28 18:12:28,615 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@12dc87f8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bc4e3b5, org.springframework.security.web.context.SecurityContextHolderFilter@59171579, org.springframework.security.web.header.HeaderWriterFilter@5793d376, org.springframework.web.filter.CorsFilter@2be73961, org.springframework.security.web.authentication.logout.LogoutFilter@7e2a9cdf, com.rentacar.security.jwt.JwtTokenFilter@2af6a452, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2141d025, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a18f5e8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a158b05, org.springframework.security.web.session.SessionManagementFilter@6994bea7, org.springframework.security.web.access.ExceptionTranslationFilter@427809b7, org.springframework.security.web.access.intercept.AuthorizationFilter@e857e92]
+2023-11-28 18:12:28,898 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-11-28 18:12:28,915 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port 8080 (http) with context path ''
+2023-11-28 18:12:28,922 INFO  [restartedMain] com.rentacar.RentACarApplication:Started RentACarApplication in 1.54 seconds (process running for 267.071)
+2023-11-28 18:12:28,924 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation unchanged
+2023-11-28 18:12:30,322 INFO  [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-11-28 18:12:30,333 INFO  [Thread-15] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:12:30,333 INFO  [Thread-15] com.zaxxer.hikari.HikariDataSource:HikariPool-4 - Shutdown initiated...
+2023-11-28 18:12:30,335 INFO  [Thread-15] com.zaxxer.hikari.HikariDataSource:HikariPool-4 - Shutdown completed.
+2023-11-28 18:12:30,386 INFO  [restartedMain] com.rentacar.RentACarApplication:Starting RentACarApplication using Java 17.0.9 with PID 10772 (C:\Users\msi\Desktop\clone\rent-a-car\target\classes started by msi in C:\Users\msi\Desktop\clone\rent-a-car)
+2023-11-28 18:12:30,386 DEBUG [restartedMain] com.rentacar.RentACarApplication:Running with Spring Boot v3.2.0, Spring v6.1.1
+2023-11-28 18:12:30,386 INFO  [restartedMain] com.rentacar.RentACarApplication:No active profile set, falling back to 1 default profile: "default"
+2023-11-28 18:12:30,573 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28 18:12:30,582 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2023-11-28 18:12:30,705 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port 8080 (http)
+2023-11-28 18:12:30,706 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2023-11-28 18:12:30,706 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-28 18:12:30,716 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2023-11-28 18:12:30,716 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 329 ms
+2023-11-28 18:12:30,820 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28 18:12:30,822 INFO  [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator:HHH000026: Second-level cache disabled
+2023-11-28 18:12:30,823 INFO  [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo:No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28 18:12:30,824 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-5 - Starting...
+2023-11-28 18:12:30,832 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool:HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@47c91bff
+2023-11-28 18:12:30,833 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-5 - Start completed.
+2023-11-28 18:12:30,834 WARN  [restartedMain] org.hibernate.orm.deprecation:HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-28 18:12:30,863 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28 18:12:30,885 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:12:30,982 DEBUG [restartedMain] com.rentacar.security.jwt.JwtTokenFilter:Filter 'jwtTokenFilter' configured for use
+2023-11-28 18:12:31,139 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28 18:12:31,392 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-28 18:12:31,430 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@15068703, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e9e82e2, org.springframework.security.web.context.SecurityContextHolderFilter@46931451, org.springframework.security.web.header.HeaderWriterFilter@2f110ee4, org.springframework.web.filter.CorsFilter@2ed6971b, org.springframework.security.web.authentication.logout.LogoutFilter@1f94ac49, com.rentacar.security.jwt.JwtTokenFilter@3aa18b8a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3083afe2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48a3acf8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@76fede1e, org.springframework.security.web.session.SessionManagementFilter@55118b96, org.springframework.security.web.access.ExceptionTranslationFilter@54977ca5, org.springframework.security.web.access.intercept.AuthorizationFilter@2ad4a072]
+2023-11-28 18:12:31,711 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-11-28 18:12:31,726 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port 8080 (http) with context path ''
+2023-11-28 18:12:31,733 INFO  [restartedMain] com.rentacar.RentACarApplication:Started RentACarApplication in 1.361 seconds (process running for 269.881)
+2023-11-28 18:12:31,734 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation unchanged
+2023-11-28 18:13:04,195 INFO  [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28 18:13:04,205 INFO  [Thread-19] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:13:04,206 INFO  [Thread-19] com.zaxxer.hikari.HikariDataSource:HikariPool-5 - Shutdown initiated...
+2023-11-28 18:13:04,208 INFO  [Thread-19] com.zaxxer.hikari.HikariDataSource:HikariPool-5 - Shutdown completed.
+2023-11-28 18:13:04,265 INFO  [restartedMain] com.rentacar.RentACarApplication:Starting RentACarApplication using Java 17.0.9 with PID 10772 (C:\Users\msi\Desktop\clone\rent-a-car\target\classes started by msi in C:\Users\msi\Desktop\clone\rent-a-car)
+2023-11-28 18:13:04,265 DEBUG [restartedMain] com.rentacar.RentACarApplication:Running with Spring Boot v3.2.0, Spring v6.1.1
+2023-11-28 18:13:04,265 INFO  [restartedMain] com.rentacar.RentACarApplication:No active profile set, falling back to 1 default profile: "default"
+2023-11-28 18:13:04,449 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28 18:13:04,459 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2023-11-28 18:13:04,585 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port 8080 (http)
+2023-11-28 18:13:04,585 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2023-11-28 18:13:04,585 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-28 18:13:04,594 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2023-11-28 18:13:04,594 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 328 ms
+2023-11-28 18:13:04,726 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28 18:13:04,728 INFO  [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator:HHH000026: Second-level cache disabled
+2023-11-28 18:13:04,729 INFO  [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo:No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28 18:13:04,729 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-6 - Starting...
+2023-11-28 18:13:04,739 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool:HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@c764815
+2023-11-28 18:13:04,739 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-6 - Start completed.
+2023-11-28 18:13:04,741 WARN  [restartedMain] org.hibernate.orm.deprecation:HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-28 18:13:04,772 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28 18:13:04,800 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:13:04,900 DEBUG [restartedMain] com.rentacar.security.jwt.JwtTokenFilter:Filter 'jwtTokenFilter' configured for use
+2023-11-28 18:13:05,041 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28 18:13:05,275 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-28 18:13:05,320 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ed9fdeb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3147ccd6, org.springframework.security.web.context.SecurityContextHolderFilter@29d733ec, org.springframework.security.web.header.HeaderWriterFilter@6aeb1647, org.springframework.web.filter.CorsFilter@110c7acb, org.springframework.security.web.authentication.logout.LogoutFilter@ab8890c, com.rentacar.security.jwt.JwtTokenFilter@712fc40e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45ca5c1a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@139a48e2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@62d5bc87, org.springframework.security.web.session.SessionManagementFilter@3f2d1af3, org.springframework.security.web.access.ExceptionTranslationFilter@2a1cc0c7, org.springframework.security.web.access.intercept.AuthorizationFilter@587fae8d]
+2023-11-28 18:13:05,604 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-11-28 18:13:05,622 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port 8080 (http) with context path ''
+2023-11-28 18:13:05,630 INFO  [restartedMain] com.rentacar.RentACarApplication:Started RentACarApplication in 1.38 seconds (process running for 303.778)
+2023-11-28 18:13:05,631 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation unchanged
+2023-11-28 18:13:42,046 INFO  [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-11-28 18:13:42,055 INFO  [Thread-23] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:13:42,056 INFO  [Thread-23] com.zaxxer.hikari.HikariDataSource:HikariPool-6 - Shutdown initiated...
+2023-11-28 18:13:42,057 INFO  [Thread-23] com.zaxxer.hikari.HikariDataSource:HikariPool-6 - Shutdown completed.
+2023-11-28 18:13:42,114 INFO  [restartedMain] com.rentacar.RentACarApplication:Starting RentACarApplication using Java 17.0.9 with PID 10772 (C:\Users\msi\Desktop\clone\rent-a-car\target\classes started by msi in C:\Users\msi\Desktop\clone\rent-a-car)
+2023-11-28 18:13:42,114 DEBUG [restartedMain] com.rentacar.RentACarApplication:Running with Spring Boot v3.2.0, Spring v6.1.1
+2023-11-28 18:13:42,114 INFO  [restartedMain] com.rentacar.RentACarApplication:No active profile set, falling back to 1 default profile: "default"
+2023-11-28 18:13:42,305 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28 18:13:42,314 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 8 ms. Found 3 JPA repository interfaces.
+2023-11-28 18:13:42,437 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port 8080 (http)
+2023-11-28 18:13:42,438 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2023-11-28 18:13:42,438 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-28 18:13:42,452 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2023-11-28 18:13:42,452 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 337 ms
+2023-11-28 18:13:42,558 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28 18:13:42,559 INFO  [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator:HHH000026: Second-level cache disabled
+2023-11-28 18:13:42,561 INFO  [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo:No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28 18:13:42,561 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-7 - Starting...
+2023-11-28 18:13:42,570 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool:HikariPool-7 - Added connection org.postgresql.jdbc.PgConnection@27d7640b
+2023-11-28 18:13:42,571 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-7 - Start completed.
+2023-11-28 18:13:42,572 WARN  [restartedMain] org.hibernate.orm.deprecation:HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-28 18:13:42,599 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28 18:13:42,624 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:13:42,717 DEBUG [restartedMain] com.rentacar.security.jwt.JwtTokenFilter:Filter 'jwtTokenFilter' configured for use
+2023-11-28 18:13:42,858 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28 18:13:43,102 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-28 18:13:43,141 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@78ae2f77, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f012b9d, org.springframework.security.web.context.SecurityContextHolderFilter@66a4d3a9, org.springframework.security.web.header.HeaderWriterFilter@4b7e87e5, org.springframework.web.filter.CorsFilter@3903323c, org.springframework.security.web.authentication.logout.LogoutFilter@476c1a22, com.rentacar.security.jwt.JwtTokenFilter@1e3d043b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b214b2d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17d48525, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c82f78e, org.springframework.security.web.session.SessionManagementFilter@58d7c6f8, org.springframework.security.web.access.ExceptionTranslationFilter@6d21769c, org.springframework.security.web.access.intercept.AuthorizationFilter@79b16cb1]
+2023-11-28 18:13:43,424 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-11-28 18:13:43,441 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port 8080 (http) with context path ''
+2023-11-28 18:13:43,447 INFO  [restartedMain] com.rentacar.RentACarApplication:Started RentACarApplication in 1.347 seconds (process running for 341.596)
+2023-11-28 18:13:43,448 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation unchanged
+2023-11-28 18:14:11,527 INFO  [http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-28 18:14:11,528 INFO  [http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet:Initializing Servlet 'dispatcherServlet'
+2023-11-28 18:14:11,529 INFO  [http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet:Completed initialization in 1 ms
+2023-11-28 18:14:11,530 WARN  [http-nio-8080-exec-2] org.springframework.web.servlet.handler.HandlerMappingIntrospector:Cache miss for REQUEST dispatch to '/register' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2023-11-28 18:14:11,531 INFO  [http-nio-8080-exec-2] com.rentacar.security.jwt.JwtTokenFilter:Request path matched exclusion path. Skipping JWT filter.
+2023-11-28 18:14:11,531 WARN  [http-nio-8080-exec-2] org.springframework.web.servlet.handler.HandlerMappingIntrospector:Cache miss for REQUEST dispatch to '/register' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2023-11-28 18:14:11,531 INFO  [http-nio-8080-exec-2] com.rentacar.security.jwt.JwtTokenFilter:Request path matched exclusion path. Skipping JWT filter.
+2023-11-28 18:14:11,609 INFO  [http-nio-8080-exec-2] com.rentacar.controller.UserJWTController:Register method called for user with email: ndmkcn1453@gmail.com
+2023-11-28 18:14:11,612 INFO  [http-nio-8080-exec-2] com.rentacar.service.UserJWTService:Attempting to register a new user with email: ndmkcn1453@gmail.com
+2023-11-28 18:14:11,723 INFO  [http-nio-8080-exec-2] com.rentacar.service.UserJWTService:User with email ndmkcn1453@gmail.com successfully registered.
+2023-11-28 18:14:19,361 INFO  [http-nio-8080-exec-3] com.rentacar.security.jwt.JwtTokenFilter:Request path matched exclusion path. Skipping JWT filter.
+2023-11-28 18:14:19,362 INFO  [http-nio-8080-exec-3] com.rentacar.security.jwt.JwtTokenFilter:Request path matched exclusion path. Skipping JWT filter.
+2023-11-28 18:14:19,365 INFO  [http-nio-8080-exec-3] com.rentacar.controller.UserJWTController:Login method called for user with email: ndmkcn1453@gmail.com
+2023-11-28 18:14:19,433 INFO  [http-nio-8080-exec-3] com.rentacar.security.service.UserDetailsServiceImpl:Attempting to load user by email: ndmkcn1453@gmail.com
+2023-11-28 18:14:19,440 INFO  [http-nio-8080-exec-3] com.rentacar.security.service.UserDetailsServiceImpl:User with email ndmkcn1453@gmail.com successfully loaded.
+2023-11-28 18:14:19,508 INFO  [http-nio-8080-exec-3] com.rentacar.security.jwt.JwtUtilsService:Generating JWT token for user with ID: 2
+2023-11-28 18:14:33,300 INFO  [http-nio-8080-exec-4] com.rentacar.security.jwt.JwtUtilsService:JWT token validation successful
+2023-11-28 18:14:33,302 INFO  [http-nio-8080-exec-4] com.rentacar.security.jwt.JwtUtilsService:Extracted user ID 2 from JWT token
+2023-11-28 18:14:33,307 INFO  [http-nio-8080-exec-4] com.rentacar.security.service.UserDetailsServiceImpl:Attempting to load user by email: ndmkcn1453@gmail.com
+2023-11-28 18:14:33,331 INFO  [http-nio-8080-exec-4] com.rentacar.security.service.UserDetailsServiceImpl:User with email ndmkcn1453@gmail.com successfully loaded.
+2023-11-28 18:14:33,331 INFO  [http-nio-8080-exec-4] com.rentacar.security.jwt.JwtTokenFilter:User successfully authenticated. User ID: 2
+2023-11-28 18:14:33,342 WARN  [http-nio-8080-exec-4] org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver:Resolved [org.springframework.security.access.AccessDeniedException: Access Denied]
+2023-11-28 18:18:41,218 INFO  [File Watcher] org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener:Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-11-28 18:18:41,228 INFO  [Thread-27] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:18:41,229 INFO  [Thread-27] com.zaxxer.hikari.HikariDataSource:HikariPool-7 - Shutdown initiated...
+2023-11-28 18:18:41,231 INFO  [Thread-27] com.zaxxer.hikari.HikariDataSource:HikariPool-7 - Shutdown completed.
+2023-11-28 18:18:41,305 INFO  [restartedMain] com.rentacar.RentACarApplication:Starting RentACarApplication using Java 17.0.9 with PID 10772 (C:\Users\msi\Desktop\clone\rent-a-car\target\classes started by msi in C:\Users\msi\Desktop\clone\rent-a-car)
+2023-11-28 18:18:41,305 DEBUG [restartedMain] com.rentacar.RentACarApplication:Running with Spring Boot v3.2.0, Spring v6.1.1
+2023-11-28 18:18:41,305 INFO  [restartedMain] com.rentacar.RentACarApplication:No active profile set, falling back to 1 default profile: "default"
+2023-11-28 18:18:41,509 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-28 18:18:41,519 INFO  [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate:Finished Spring Data repository scanning in 9 ms. Found 3 JPA repository interfaces.
+2023-11-28 18:18:41,642 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat initialized with port 8080 (http)
+2023-11-28 18:18:41,643 INFO  [restartedMain] org.apache.catalina.core.StandardService:Starting service [Tomcat]
+2023-11-28 18:18:41,643 INFO  [restartedMain] org.apache.catalina.core.StandardEngine:Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-11-28 18:18:41,653 INFO  [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:Initializing Spring embedded WebApplicationContext
+2023-11-28 18:18:41,654 INFO  [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:Root WebApplicationContext: initialization completed in 347 ms
+2023-11-28 18:18:41,766 INFO  [restartedMain] org.hibernate.jpa.internal.util.LogHelper:HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-28 18:18:41,768 INFO  [restartedMain] org.hibernate.cache.internal.RegionFactoryInitiator:HHH000026: Second-level cache disabled
+2023-11-28 18:18:41,770 INFO  [restartedMain] org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo:No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-28 18:18:41,772 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-8 - Starting...
+2023-11-28 18:18:41,780 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool:HikariPool-8 - Added connection org.postgresql.jdbc.PgConnection@2c29a7e
+2023-11-28 18:18:41,780 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource:HikariPool-8 - Start completed.
+2023-11-28 18:18:41,782 WARN  [restartedMain] org.hibernate.orm.deprecation:HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-28 18:18:41,811 INFO  [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-28 18:18:41,834 INFO  [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:18:41,926 DEBUG [restartedMain] com.rentacar.security.jwt.JwtTokenFilter:Filter 'jwtTokenFilter' configured for use
+2023-11-28 18:18:42,054 WARN  [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-28 18:18:42,302 INFO  [restartedMain] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-11-28 18:18:42,343 INFO  [restartedMain] org.springframework.security.web.DefaultSecurityFilterChain:Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b60818c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78516682, org.springframework.security.web.context.SecurityContextHolderFilter@5e0e307, org.springframework.security.web.header.HeaderWriterFilter@3d26c752, org.springframework.web.filter.CorsFilter@2d932da2, org.springframework.security.web.authentication.logout.LogoutFilter@3b24562d, com.rentacar.security.jwt.JwtTokenFilter@44c6d8bf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18c7087f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@359968c3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7777a820, org.springframework.security.web.session.SessionManagementFilter@42b8ac91, org.springframework.security.web.access.ExceptionTranslationFilter@7789a93b, org.springframework.security.web.access.intercept.AuthorizationFilter@4ade7c32]
+2023-11-28 18:18:42,621 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:LiveReload server is running on port 35729
+2023-11-28 18:18:42,637 INFO  [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer:Tomcat started on port 8080 (http) with context path ''
+2023-11-28 18:18:42,643 INFO  [restartedMain] com.rentacar.RentACarApplication:Started RentACarApplication in 1.358 seconds (process running for 640.791)
+2023-11-28 18:18:42,644 INFO  [restartedMain] org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:Condition evaluation unchanged
+2023-11-28 18:20:34,288 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28 18:20:34,289 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-8 - Shutdown initiated...
+2023-11-28 18:20:34,290 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource:HikariPool-8 - Shutdown completed.

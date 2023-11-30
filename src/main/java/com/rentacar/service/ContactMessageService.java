@@ -15,6 +15,14 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * Description of UpdatePasswordRequestDTO.
+ *
+ * @author github.com/nedimkacanofficial
+ * @version 1.0
+ * @package com.rentacar.service
+ * @since 28/11/2023
+ */
 @Service
 @Slf4j
 @RequiredArgsConstructor

@@ -9,6 +9,14 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * Description of UpdatePasswordRequestDTO.
+ *
+ * @author github.com/nedimkacanofficial
+ * @version 1.0
+ * @package com.rentacar.mapper
+ * @since 28/11/2023
+ */
 public class UserMapper {
     public static User toEntity(RegisterRequestDTO registerRequestDTO, String encodedPassword, Set<Role> roleSet) {
         User user = new User();

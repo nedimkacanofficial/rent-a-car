@@ -11,6 +11,14 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Description of UpdatePasswordRequestDTO.
+ *
+ * @author github.com/nedimkacanofficial
+ * @version 1.0
+ * @package com.rentacar.domain
+ * @since 28/11/2023
+ */
 @Entity
 @Table(name = "tbl_user")
 @Getter

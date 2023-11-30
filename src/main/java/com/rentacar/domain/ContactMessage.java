@@ -9,6 +9,14 @@ import lombok.Setter;
 import java.io.Serial;
 import java.io.Serializable;
 
+/**
+ * Description of UpdatePasswordRequestDTO.
+ *
+ * @author github.com/nedimkacanofficial
+ * @version 1.0
+ * @package com.rentacar.domain
+ * @since 28/11/2023
+ */
 @Entity
 @Table(name = "tbl_contact_message")
 @Getter

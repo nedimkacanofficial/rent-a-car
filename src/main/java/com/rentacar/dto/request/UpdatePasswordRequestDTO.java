@@ -1,8 +1,8 @@
 package com.rentacar.dto.request;
 
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,13 +20,14 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class LoginRequestDTO {
-    @Email(message = "Please enter a valid email address.")
-    @NotBlank(message = "Email is required.")
-    @NotNull(message = "Email cannot be null.")
-    private String email;
-
+public class UpdatePasswordRequestDTO {
+    @Size(min = 4, max = 50, message = "Password must be between {min} and {max} characters.")
     @NotBlank(message = "Password is required.")
     @NotNull(message = "Password cannot be null.")
-    private String password;
+    private String oldPassword;
+
+    @Size(min = 4, max = 50, message = "Password must be between {min} and {max} characters.")
+    @NotBlank(message = "Password is required.")
+    @NotNull(message = "Password cannot be null.")
+    private String newPassword;
 }

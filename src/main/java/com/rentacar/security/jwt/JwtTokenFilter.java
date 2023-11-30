@@ -13,15 +13,25 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
+/**
+ * Description of UpdatePasswordRequestDTO.
+ *
+ * @author github.com/nedimkacanofficial
+ * @version 1.0
+ * @package com.rentacar.security.jwt
+ * @since 28/11/2023
+ */
 @Component
 @RequiredArgsConstructor
 @Slf4j
+@Transactional
 public class JwtTokenFilter extends OncePerRequestFilter {
     private final JwtUtilsService jwtUtilsService;
 

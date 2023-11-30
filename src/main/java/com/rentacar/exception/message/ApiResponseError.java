@@ -10,6 +10,14 @@ import java.time.LocalDateTime;
  * We wrote an error class for the message to be sent to the client when we throw the resulting exceptions.
  */
 
+/**
+ * Description of UpdatePasswordRequestDTO.
+ *
+ * @author github.com/nedimkacanofficial
+ * @version 1.0
+ * @package com.rentacar.exception.message
+ * @since 28/11/2023
+ */
 @Getter
 public class ApiResponseError {
     private HttpStatus status;

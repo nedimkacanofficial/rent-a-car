@@ -14,6 +14,14 @@ import org.springframework.stereotype.Service;
 import java.security.Key;
 import java.util.Date;
 
+/**
+ * Description of UpdatePasswordRequestDTO.
+ *
+ * @author github.com/nedimkacanofficial
+ * @version 1.0
+ * @package com.rentacar.security.jwt
+ * @since 28/11/2023
+ */
 @Service
 public class JwtUtilsService {
     private final static Logger logger = LoggerFactory.getLogger(JwtUtilsService.class);

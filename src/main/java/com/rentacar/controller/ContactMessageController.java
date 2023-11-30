@@ -21,6 +21,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * Description of UpdatePasswordRequestDTO.
+ *
+ * @author github.com/nedimkacanofficial
+ * @version 1.0
+ * @package com.rentacar.controller
+ * @since 28/11/2023
+ */
 @RestController
 @RequestMapping("/contact-messages")
 @RequiredArgsConstructor
@@ -160,10 +168,10 @@ public class ContactMessageController {
      * HttpStatus.BAD_REQUEST is returned.
      */
     @GetMapping(path = "/pages")
-    public ResponseEntity<Page<ContactMessageResponseDTO>> getAllWithPage(@RequestParam(value = "page") int page, @RequestParam(value = "size") int size, @RequestParam(value = "sort") String sortField, @Schema(defaultValue = "DESC", allowableValues = {"DESC", "ASC"}) @RequestParam(value = "direction", defaultValue = "DESC") String direction) {
+    public ResponseEntity<Page<ContactMessageResponseDTO>> getAllWithPage(@RequestParam(value = "page") int page, @RequestParam(value = "size") int size, @RequestParam(value = "sort") String sortField, @Schema(defaultValue = "DESC", allowableValues = {"DESC", "ASC"}) @RequestParam(value = "direction", defaultValue = "DESC") Direction direction) {
         int adjustedPageNumber = page - 1;
         Direction checkDirection = Direction.ASC;
-        if ("desc".equalsIgnoreCase(direction)) {
+        if ("desc".equalsIgnoreCase(direction.name())) {
             checkDirection = Direction.DESC;
         }
 
